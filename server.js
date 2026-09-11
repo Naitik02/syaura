@@ -103,8 +103,8 @@ const products = [
     floating: '/products/floating/cookie-crumble-floating.png',
     gallery: [
       '/products/floating/cookie-crumble-studio.jpg',
-      '/products/floating/cookie-crumble-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/cookie-crumble-macro.jpg',
+      '/products/floating/cookie-crumble-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],
@@ -157,8 +157,8 @@ const products = [
     floating: '/products/floating/cookie-crave-floating.png',
     gallery: [
       '/products/floating/cookie-crave-studio.jpg',
-      '/products/floating/cookie-crave-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/cookie-crave-macro.jpg',
+      '/products/floating/cookie-crave-floating.png'
     ],
     baseCustomizable: true,
     availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
@@ -184,8 +184,8 @@ const products = [
     floating: '/products/floating/almond-crush-floating.png',
     gallery: [
       '/products/floating/almond-crush-studio.jpg',
-      '/products/floating/almond-crush-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/almond-crush-macro.jpg',
+      '/products/floating/almond-crush-floating.png'
     ],
     baseCustomizable: true,
     availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
@@ -212,7 +212,7 @@ const products = [
     gallery: [
       '/products/floating/biscoff-baby-studio.jpg',
       '/products/floating/biscoff-baby-macro.jpg',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/biscoff-baby-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],
@@ -240,8 +240,8 @@ const products = [
     floating: '/products/floating/nut-noble-floating.png',
     gallery: [
       '/products/floating/nut-noble-studio.jpg',
-      '/products/floating/nut-noble-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/nut-noble-macro.jpg',
+      '/products/floating/nut-noble-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],
@@ -266,8 +266,8 @@ const products = [
     floating: '/products/floating/cookie-crunch-bar-floating.png',
     gallery: [
       '/products/floating/cookie-crunch-bar-studio.jpg',
-      '/products/floating/cookie-crunch-bar-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/cookie-crunch-bar-macro.jpg',
+      '/products/floating/cookie-crunch-bar-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],
@@ -292,8 +292,8 @@ const products = [
     floating: '/products/floating/modak-royale-floating.png',
     gallery: [
       '/products/floating/modak-royale-studio.jpg',
-      '/products/floating/modak-royale-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/modak-royale-macro.jpg',
+      '/products/floating/modak-royale-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],

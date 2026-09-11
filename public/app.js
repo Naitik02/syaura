@@ -20,8 +20,8 @@ const SYAURA_CATALOG = {
     cutout: '/products/floating/cookie-crumble-floating.png',
     gallery: [
       '/products/floating/cookie-crumble-studio.jpg',
-      '/products/floating/cookie-crumble-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/cookie-crumble-macro.jpg',
+      '/products/floating/cookie-crumble-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],
@@ -51,9 +51,9 @@ const SYAURA_CATALOG = {
     baseCustomizable: true,
     availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
     baseImages: {
-      'Classic Milk': '/products/floating/royal-crunch-studio.jpg',
-      'Velvet Dark': '/products/floating/royal-crunch-macro.jpg',
-      'Assorted (Mixed)': '/products/floating/royal-crunch-floating.png'
+      'Classic Milk': '/products/bases/royal-crunch-milk.jpg',
+      'Velvet Dark': '/products/bases/royal-crunch-dark.jpg',
+      'Assorted (Mixed)': '/products/bases/royal-crunch-assorted.jpg'
     },
     defaultQty: '4 Pieces',
     defaultBase: 'Classic Milk',
@@ -75,8 +75,8 @@ const SYAURA_CATALOG = {
     cutout: '/products/floating/cookie-crave-floating.png',
     gallery: [
       '/products/floating/cookie-crave-studio.jpg',
-      '/products/floating/cookie-crave-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/cookie-crave-macro.jpg',
+      '/products/floating/cookie-crave-floating.png'
     ],
     baseCustomizable: true,
     availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
@@ -105,8 +105,8 @@ const SYAURA_CATALOG = {
     cutout: '/products/floating/almond-crush-floating.png',
     gallery: [
       '/products/floating/almond-crush-studio.jpg',
-      '/products/floating/almond-crush-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/almond-crush-macro.jpg',
+      '/products/floating/almond-crush-floating.png'
     ],
     baseCustomizable: true,
     availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
@@ -136,7 +136,7 @@ const SYAURA_CATALOG = {
     gallery: [
       '/products/floating/biscoff-baby-studio.jpg',
       '/products/floating/biscoff-baby-macro.jpg',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/biscoff-baby-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],
@@ -160,8 +160,8 @@ const SYAURA_CATALOG = {
     cutout: '/products/floating/nut-noble-floating.png',
     gallery: [
       '/products/floating/nut-noble-studio.jpg',
-      '/products/floating/nut-noble-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/nut-noble-macro.jpg',
+      '/products/floating/nut-noble-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],
@@ -184,8 +184,8 @@ const SYAURA_CATALOG = {
     cutout: '/products/floating/cookie-crunch-bar-floating.png',
     gallery: [
       '/products/floating/cookie-crunch-bar-studio.jpg',
-      '/products/floating/cookie-crunch-bar-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/cookie-crunch-bar-macro.jpg',
+      '/products/floating/cookie-crunch-bar-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],
@@ -208,8 +208,8 @@ const SYAURA_CATALOG = {
     cutout: '/products/floating/modak-royale-floating.png',
     gallery: [
       '/products/floating/modak-royale-studio.jpg',
-      '/products/floating/modak-royale-floating.png',
-      '/products/floating/luxury-box-studio.jpg'
+      '/products/floating/modak-royale-macro.jpg',
+      '/products/floating/modak-royale-floating.png'
     ],
     baseCustomizable: false,
     availableBases: [],
