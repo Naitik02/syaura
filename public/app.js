@@ -21,12 +21,20 @@ const SYAURA_CATALOG = {
     gallery: [
       '/products/floating/cookie-crumble-studio.jpg',
       '/products/floating/cookie-crumble-macro.jpg',
-      '/products/floating/cookie-crumble-floating.png'
+      '/products/floating/cookie-crumble-floating.png',
+      '/products/bases/cookie-crumble-milk.jpg',
+      '/products/bases/cookie-crumble-dark.jpg',
+      '/products/bases/cookie-crumble-white.jpg'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Milk Chocolate': '/products/bases/cookie-crumble-milk.jpg',
+      'Dark Chocolate': '/products/bases/cookie-crumble-dark.jpg',
+      'White Chocolate': '/products/bases/cookie-crumble-white.jpg'
+    },
     defaultQty: '4 Pieces',
-    defaultBase: 'Oreo Ball',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '4 Pieces': 139,
       '6 Pieces': 169
@@ -46,17 +54,20 @@ const SYAURA_CATALOG = {
     gallery: [
       '/products/floating/royal-crunch-studio.jpg',
       '/products/floating/royal-crunch-macro.jpg',
-      '/products/floating/royal-crunch-floating.png'
+      '/products/floating/royal-crunch-floating.png',
+      '/products/bases/royal-crunch-milk.jpg',
+      '/products/bases/royal-crunch-dark.jpg',
+      '/products/bases/royal-crunch-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
-      'Classic Milk': '/products/bases/royal-crunch-milk.jpg',
-      'Velvet Dark': '/products/bases/royal-crunch-dark.jpg',
-      'Assorted (Mixed)': '/products/bases/royal-crunch-assorted.jpg'
+      'Milk Chocolate': '/products/bases/royal-crunch-milk.jpg',
+      'Dark Chocolate': '/products/bases/royal-crunch-dark.jpg',
+      'White Chocolate': '/products/bases/royal-crunch-white.jpg'
     },
     defaultQty: '4 Pieces',
-    defaultBase: 'Classic Milk',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '4 Pieces': 179,
       '6 Pieces': 199
@@ -76,17 +87,20 @@ const SYAURA_CATALOG = {
     gallery: [
       '/products/floating/cookie-crave-studio.jpg',
       '/products/floating/cookie-crave-macro.jpg',
-      '/products/floating/cookie-crave-floating.png'
+      '/products/floating/cookie-crave-floating.png',
+      '/products/bases/cookie-crave-milk.jpg',
+      '/products/bases/cookie-crave-dark.jpg',
+      '/products/bases/cookie-crave-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
-      'Classic Milk': '/products/bases/cookie-crave-milk.jpg',
-      'Velvet Dark': '/products/bases/cookie-crave-dark.jpg',
-      'Assorted (Mixed)': '/products/bases/cookie-crave-assorted.jpg'
+      'Milk Chocolate': '/products/bases/cookie-crave-milk.jpg',
+      'Dark Chocolate': '/products/bases/cookie-crave-dark.jpg',
+      'White Chocolate': '/products/bases/cookie-crave-white.jpg'
     },
     defaultQty: '4 Pieces',
-    defaultBase: 'Classic Milk',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '4 Pieces': 119,
       '6 Pieces': 139
@@ -106,17 +120,20 @@ const SYAURA_CATALOG = {
     gallery: [
       '/products/floating/almond-crush-studio.jpg',
       '/products/floating/almond-crush-macro.jpg',
-      '/products/floating/almond-crush-floating.png'
+      '/products/floating/almond-crush-floating.png',
+      '/products/bases/almond-crush-milk.jpg',
+      '/products/bases/almond-crush-dark.jpg',
+      '/products/bases/almond-crush-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
-      'Classic Milk': '/products/bases/almond-crush-milk.jpg',
-      'Velvet Dark': '/products/bases/almond-crush-dark.jpg',
-      'Assorted (Mixed)': '/products/bases/almond-crush-assorted.jpg'
+      'Milk Chocolate': '/products/bases/almond-crush-milk.jpg',
+      'Dark Chocolate': '/products/bases/almond-crush-dark.jpg',
+      'White Chocolate': '/products/bases/almond-crush-white.jpg'
     },
     defaultQty: '4 Pieces',
-    defaultBase: 'Classic Milk',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '4 Pieces': 169,
       '6 Pieces': 199
@@ -130,18 +147,26 @@ const SYAURA_CATALOG = {
     category: 'Choco Bites',
     shape: 'Square Pcs · 4 & 6 per box',
     badge: 'Biscoff Special',
-    description: 'Handcrafted white chocolate square topped with Belgian speculoos swirl and crunchy Lotus Biscoff biscuit crumble. A warm, caramelised bite in every piece.',
+    description: 'Handcrafted chocolate square topped with Belgian speculoos swirl and crunchy Lotus Biscoff biscuit crumble. A warm, caramelised bite in every piece.',
     mainImage: '/products/floating/biscoff-baby-studio.jpg',
     cutout: '/products/floating/biscoff-baby-floating.png',
     gallery: [
       '/products/floating/biscoff-baby-studio.jpg',
       '/products/floating/biscoff-baby-macro.jpg',
-      '/products/floating/biscoff-baby-floating.png'
+      '/products/floating/biscoff-baby-floating.png',
+      '/products/bases/biscoff-baby-white.jpg',
+      '/products/bases/biscoff-baby-milk.jpg',
+      '/products/bases/biscoff-baby-dark.jpg'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['White Chocolate', 'Milk Chocolate', 'Dark Chocolate'],
+    baseImages: {
+      'White Chocolate': '/products/bases/biscoff-baby-white.jpg',
+      'Milk Chocolate': '/products/bases/biscoff-baby-milk.jpg',
+      'Dark Chocolate': '/products/bases/biscoff-baby-dark.jpg'
+    },
     defaultQty: '4 Pieces',
-    defaultBase: 'Biscoff Chocolate',
+    defaultBase: 'White Chocolate',
     prices: {
       '4 Pieces': 199,
       '6 Pieces': 239
@@ -233,12 +258,20 @@ const SYAURA_CATALOG = {
     gallery: [
       '/products/floating/cookie-heart-studio.jpg',
       '/products/floating/cookie-heart-macro.jpg',
-      '/products/floating/cookie-heart-floating.png'
+      '/products/floating/cookie-heart-floating.png',
+      '/products/bases/cookie-heart-milk.jpg',
+      '/products/bases/cookie-heart-dark.jpg',
+      '/products/bases/cookie-heart-white.jpg'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Milk Chocolate': '/products/bases/cookie-heart-milk.jpg',
+      'Dark Chocolate': '/products/bases/cookie-heart-dark.jpg',
+      'White Chocolate': '/products/bases/cookie-heart-white.jpg'
+    },
     defaultQty: '12 Pieces',
-    defaultBase: 'Oreo Heart',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '12 Pieces': 499,
       '18 Pieces': 699
@@ -258,12 +291,20 @@ const SYAURA_CATALOG = {
     gallery: [
       '/products/floating/royal-heart-studio.jpg',
       '/products/floating/royal-heart-macro.jpg',
-      '/products/floating/royal-heart-floating.png'
+      '/products/floating/royal-heart-floating.png',
+      '/products/bases/royal-heart-milk.jpg',
+      '/products/bases/royal-heart-dark.jpg',
+      '/products/bases/royal-heart-white.jpg'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Milk Chocolate': '/products/bases/royal-heart-milk.jpg',
+      'Dark Chocolate': '/products/bases/royal-heart-dark.jpg',
+      'White Chocolate': '/products/bases/royal-heart-white.jpg'
+    },
     defaultQty: '12 Pieces',
-    defaultBase: 'Mixed Dry Fruit Heart',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '12 Pieces': 449,
       '18 Pieces': 649
@@ -274,7 +315,7 @@ const SYAURA_CATALOG = {
 
 // Global State
 let currentProduct = null;
-let currentBase = 'Assorted (Mixed)';
+let currentBase = 'Milk Chocolate';
 let currentQty = '4 Pieces';
 
 // --------------------------------------------------------------------------
@@ -436,7 +477,11 @@ window.openProductModal = function (productId) {
 
   // Set main image to default or base image
   if (modalMainImg) {
-    modalMainImg.src = prod.gallery[0] || prod.mainImage;
+    if (hasBases && prod.baseImages && prod.baseImages[currentBase]) {
+      modalMainImg.src = prod.baseImages[currentBase];
+    } else {
+      modalMainImg.src = prod.gallery[0] || prod.mainImage;
+    }
     modalMainImg.alt = prod.name;
   }
 
@@ -445,10 +490,19 @@ window.openProductModal = function (productId) {
     modalThumbStrip.innerHTML = '';
     prod.gallery.forEach((imgSrc, idx) => {
       const thumb = document.createElement('div');
-      thumb.className = `modal-thumb modal-thumb-item ${idx === 0 ? 'active' : ''}`;
+      const isInitialActive = hasBases && prod.baseImages && prod.baseImages[currentBase]
+        ? imgSrc === prod.baseImages[currentBase]
+        : idx === 0;
+      thumb.className = `modal-thumb modal-thumb-item ${isInitialActive ? 'active' : ''}`;
       thumb.innerHTML = `<img src="${imgSrc}" alt="${prod.name} view ${idx + 1}" loading="lazy">`;
       thumb.addEventListener('click', () => {
-        if (modalMainImg) modalMainImg.src = imgSrc;
+        if (modalMainImg) {
+          modalMainImg.style.opacity = '0.35';
+          setTimeout(() => {
+            modalMainImg.src = imgSrc;
+            modalMainImg.style.opacity = '1';
+          }, 100);
+        }
         modalThumbStrip.querySelectorAll('.modal-thumb, .modal-thumb-item').forEach((t) => t.classList.remove('active'));
         thumb.classList.add('active');
       });
@@ -456,7 +510,7 @@ window.openProductModal = function (productId) {
     });
   }
 
-  // Setup Base Chips: Hide completely for single-flavor products (Biscoff, Bars, etc.)
+  // Setup Base Chips: Hide completely for single-flavor products (Nut & Noble, Modak Royale, etc.)
   const modalBaseGroup = document.getElementById('modalBaseGroup');
   if (modalBaseGroup) {
     if (hasBases) {
@@ -508,12 +562,27 @@ function selectChocolateBase(baseName) {
   // Dynamic Image Switching based on Flavor/Base selection!
   if (currentProduct && currentProduct.baseImages && currentProduct.baseImages[baseName]) {
     const modalMainImg = document.getElementById('modalMainImg');
+    const targetSrc = currentProduct.baseImages[baseName];
     if (modalMainImg) {
-      modalMainImg.style.opacity = '0.4';
+      modalMainImg.style.transition = 'opacity 0.18s ease';
+      modalMainImg.style.opacity = '0.35';
       setTimeout(() => {
-        modalMainImg.src = currentProduct.baseImages[baseName];
+        modalMainImg.src = targetSrc;
         modalMainImg.style.opacity = '1';
       }, 120);
+    }
+    
+    // Also highlight thumbnail matching this base if present in gallery
+    const modalThumbStrip = document.getElementById('modalThumbStrip');
+    if (modalThumbStrip) {
+      modalThumbStrip.querySelectorAll('.modal-thumb, .modal-thumb-item').forEach((thumb) => {
+        const img = thumb.querySelector('img');
+        if (img && img.src.includes(targetSrc.replace('/products/', ''))) {
+          thumb.classList.add('active');
+        } else {
+          thumb.classList.remove('active');
+        }
+      });
     }
   }
 

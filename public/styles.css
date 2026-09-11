@@ -2480,7 +2480,7 @@ textarea.form-control {
 
 .base-chips-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
@@ -2511,6 +2511,20 @@ textarea.form-control {
   box-shadow: 0 0 14px rgba(212, 175, 55, 0.25);
   color: var(--text-pure);
   font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .base-chips-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .base-chip {
+    padding: 8px 6px;
+    font-size: 11.5px;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+  }
 }
 
 /* Quantity Selector */

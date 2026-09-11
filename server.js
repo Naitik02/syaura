@@ -104,11 +104,20 @@ const products = [
     gallery: [
       '/products/floating/cookie-crumble-studio.jpg',
       '/products/floating/cookie-crumble-macro.jpg',
-      '/products/floating/cookie-crumble-floating.png'
+      '/products/floating/cookie-crumble-floating.png',
+      '/products/bases/cookie-crumble-milk.jpg',
+      '/products/bases/cookie-crumble-dark.jpg',
+      '/products/bases/cookie-crumble-white.jpg'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Milk Chocolate': '/products/bases/cookie-crumble-milk.jpg',
+      'Dark Chocolate': '/products/bases/cookie-crumble-dark.jpg',
+      'White Chocolate': '/products/bases/cookie-crumble-white.jpg'
+    },
     defaultQuantity: '4 Pieces',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '4 Pieces': 139,
       '6 Pieces': 169
@@ -131,11 +140,20 @@ const products = [
     gallery: [
       '/products/floating/royal-crunch-studio.jpg',
       '/products/floating/royal-crunch-macro.jpg',
-      '/products/floating/royal-crunch-floating.png'
+      '/products/floating/royal-crunch-floating.png',
+      '/products/bases/royal-crunch-milk.jpg',
+      '/products/bases/royal-crunch-dark.jpg',
+      '/products/bases/royal-crunch-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Milk Chocolate': '/products/bases/royal-crunch-milk.jpg',
+      'Dark Chocolate': '/products/bases/royal-crunch-dark.jpg',
+      'White Chocolate': '/products/bases/royal-crunch-white.jpg'
+    },
     defaultQuantity: '4 Pieces',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '4 Pieces': 179,
       '6 Pieces': 199
@@ -158,11 +176,20 @@ const products = [
     gallery: [
       '/products/floating/cookie-crave-studio.jpg',
       '/products/floating/cookie-crave-macro.jpg',
-      '/products/floating/cookie-crave-floating.png'
+      '/products/floating/cookie-crave-floating.png',
+      '/products/bases/cookie-crave-milk.jpg',
+      '/products/bases/cookie-crave-dark.jpg',
+      '/products/bases/cookie-crave-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Milk Chocolate': '/products/bases/cookie-crave-milk.jpg',
+      'Dark Chocolate': '/products/bases/cookie-crave-dark.jpg',
+      'White Chocolate': '/products/bases/cookie-crave-white.jpg'
+    },
     defaultQuantity: '4 Pieces',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '4 Pieces': 119,
       '6 Pieces': 139
@@ -185,11 +212,20 @@ const products = [
     gallery: [
       '/products/floating/almond-crush-studio.jpg',
       '/products/floating/almond-crush-macro.jpg',
-      '/products/floating/almond-crush-floating.png'
+      '/products/floating/almond-crush-floating.png',
+      '/products/bases/almond-crush-milk.jpg',
+      '/products/bases/almond-crush-dark.jpg',
+      '/products/bases/almond-crush-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Classic Milk', 'Velvet Dark', 'Assorted (Mixed)'],
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Milk Chocolate': '/products/bases/almond-crush-milk.jpg',
+      'Dark Chocolate': '/products/bases/almond-crush-dark.jpg',
+      'White Chocolate': '/products/bases/almond-crush-white.jpg'
+    },
     defaultQuantity: '4 Pieces',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '4 Pieces': 169,
       '6 Pieces': 199
@@ -204,7 +240,7 @@ const products = [
     categoryTitle: 'Choco Bites',
     shape: 'square',
     shapeLabel: 'Square Pcs · 4 & 6 per box',
-    description: 'Handcrafted white chocolate square topped with Belgian speculoos swirl and crunchy Lotus Biscoff biscuit crumble. A warm, caramelised bite in every piece.',
+    description: 'Handcrafted chocolate square topped with Belgian speculoos swirl and crunchy Lotus Biscoff biscuit crumble. A warm, caramelised bite in every piece.',
     badge: 'Biscoff Special',
     image: '/products/floating/biscoff-baby-studio.jpg',
     cutout: '/products/floating/biscoff-baby-floating.png',
@@ -212,11 +248,20 @@ const products = [
     gallery: [
       '/products/floating/biscoff-baby-studio.jpg',
       '/products/floating/biscoff-baby-macro.jpg',
-      '/products/floating/biscoff-baby-floating.png'
+      '/products/floating/biscoff-baby-floating.png',
+      '/products/bases/biscoff-baby-white.jpg',
+      '/products/bases/biscoff-baby-milk.jpg',
+      '/products/bases/biscoff-baby-dark.jpg'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['White Chocolate', 'Milk Chocolate', 'Dark Chocolate'],
+    baseImages: {
+      'White Chocolate': '/products/bases/biscoff-baby-white.jpg',
+      'Milk Chocolate': '/products/bases/biscoff-baby-milk.jpg',
+      'Dark Chocolate': '/products/bases/biscoff-baby-dark.jpg'
+    },
     defaultQuantity: '4 Pieces',
+    defaultBase: 'White Chocolate',
     prices: {
       '4 Pieces': 199,
       '6 Pieces': 239
@@ -321,11 +366,20 @@ const products = [
     gallery: [
       '/products/floating/cookie-heart-studio.jpg',
       '/products/floating/cookie-heart-macro.jpg',
-      '/products/floating/cookie-heart-floating.png'
+      '/products/floating/cookie-heart-floating.png',
+      '/products/bases/cookie-heart-milk.jpg',
+      '/products/bases/cookie-heart-dark.jpg',
+      '/products/bases/cookie-heart-white.jpg'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Milk Chocolate': '/products/bases/cookie-heart-milk.jpg',
+      'Dark Chocolate': '/products/bases/cookie-heart-dark.jpg',
+      'White Chocolate': '/products/bases/cookie-heart-white.jpg'
+    },
     defaultQuantity: '12 Pieces',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '12 Pieces': 499,
       '18 Pieces': 699
@@ -348,11 +402,20 @@ const products = [
     gallery: [
       '/products/floating/royal-heart-studio.jpg',
       '/products/floating/royal-heart-macro.jpg',
-      '/products/floating/royal-heart-floating.png'
+      '/products/floating/royal-heart-floating.png',
+      '/products/bases/royal-heart-milk.jpg',
+      '/products/bases/royal-heart-dark.jpg',
+      '/products/bases/royal-heart-white.jpg'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Milk Chocolate': '/products/bases/royal-heart-milk.jpg',
+      'Dark Chocolate': '/products/bases/royal-heart-dark.jpg',
+      'White Chocolate': '/products/bases/royal-heart-white.jpg'
+    },
     defaultQuantity: '12 Pieces',
+    defaultBase: 'Milk Chocolate',
     prices: {
       '12 Pieces': 449,
       '18 Pieces': 649
