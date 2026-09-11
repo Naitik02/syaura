@@ -1,0 +1,199 @@
+[
+  {
+    "id": "SYAURA-9036081D",
+    "createdAt": "2026-09-09T16:45:07.050Z",
+    "name": "Test Customer",
+    "phone": "9876543210",
+    "city": "Ulhasnagar",
+    "address": "123 Test St",
+    "deliveryDate": "2026-09-10",
+    "notes": "",
+    "items": [
+      {
+        "name": "Cookie Crumble",
+        "qty": 1,
+        "unitPrice": 169
+      }
+    ],
+    "packageFee": 35,
+    "deliveryFee": 55,
+    "subtotal": 169,
+    "totalAmount": 259,
+    "upiRef": "UPI-423985729104",
+    "screenshotUrl": "/uploads/receipts/SYAURA-9036081D-receipt.png",
+    "paymentStatus": "Payment Verified & Approved",
+    "orderStatus": "Approved & Scheduled",
+    "adminNotes": "Payment verified on UPI statement. Scheduled for fresh tempering tomorrow.",
+    "timeline": [
+      {
+        "step": 1,
+        "title": "Order Placed & Payment Uploaded",
+        "status": "completed",
+        "time": "2026-09-09T16:45:07.050Z",
+        "description": "Order received with 1 item(s). Payment proof submitted."
+      },
+      {
+        "step": 2,
+        "title": "Payment Verification & Admin Approval",
+        "status": "completed",
+        "time": "2026-09-09T16:45:13.180Z",
+        "description": "Our admin is verifying your UPI payment receipt."
+      },
+      {
+        "step": 3,
+        "title": "Artisanal Handcrafting",
+        "status": "in_progress",
+        "time": null,
+        "description": "Small batch freshly tempered chocolate crafting."
+      },
+      {
+        "step": 4,
+        "title": "Out for Delivery (Ulhasnagar)",
+        "status": "pending",
+        "time": null,
+        "description": "Scheduled for delivery on 2026-09-10."
+      },
+      {
+        "step": 5,
+        "title": "Delivered",
+        "status": "pending",
+        "time": null,
+        "description": "Enjoy your handcrafted luxury chocolates!"
+      }
+    ]
+  },
+  {
+    "id": "SYAURA-BD4DB70C",
+    "createdAt": "2026-09-09T19:17:22.444Z",
+    "name": "Rahul Sharma",
+    "phone": "9876543210",
+    "city": "Kalyan",
+    "address": "Flat 402, Royal Palms, Shivaji Chowk, Kalyan West",
+    "deliveryDate": "2026-09-11",
+    "notes": "",
+    "items": [
+      {
+        "productId": "cookie-crumble",
+        "name": "Cookie Crumble",
+        "flavour": "Oreo Ball",
+        "image": "/products/floating/cookie-crumble-studio.jpg",
+        "cutout": "/products/floating/cookie-crumble-floating.png",
+        "qtyKey": "6 Pieces",
+        "base": "Assorted (Mixed)",
+        "unitPrice": 169,
+        "qty": 2
+      }
+    ],
+    "packageFee": 36,
+    "deliveryFee": 56,
+    "subtotal": 338,
+    "totalAmount": 430,
+    "upiRef": "UTR264395479946",
+    "screenshotUrl": "/uploads/receipts/SYAURA-BD4DB70C-receipt.png",
+    "paymentStatus": "Payment Verified & Approved",
+    "orderStatus": "Approved & Scheduled",
+    "adminNotes": "",
+    "timeline": [
+      {
+        "step": 1,
+        "title": "Order Placed & Payment Uploaded",
+        "status": "completed",
+        "time": "2026-09-09T19:17:22.445Z",
+        "description": "Order received with 1 item(s). Payment proof submitted."
+      },
+      {
+        "step": 2,
+        "title": "Payment Verification & Admin Approval",
+        "status": "completed",
+        "time": "2026-09-09T19:21:31.680Z",
+        "description": "Our admin is verifying your UPI payment receipt."
+      },
+      {
+        "step": 3,
+        "title": "Artisanal Handcrafting",
+        "status": "in_progress",
+        "time": null,
+        "description": "Small batch freshly tempered chocolate crafting."
+      },
+      {
+        "step": 4,
+        "title": "Out for Delivery (Kalyan)",
+        "status": "pending",
+        "time": null,
+        "description": "Scheduled for delivery on 2026-09-11."
+      },
+      {
+        "step": 5,
+        "title": "Delivered",
+        "status": "pending",
+        "time": null,
+        "description": "Enjoy your handcrafted luxury chocolates!"
+      }
+    ]
+  },
+  {
+    "id": "SYAURA-92E5024A",
+    "createdAt": "2026-09-09T20:15:10.448Z",
+    "name": "Test User",
+    "phone": "9876543210",
+    "city": "Kalyan",
+    "address": "Test address",
+    "deliveryDate": "2026-09-11",
+    "notes": "",
+    "items": [
+      {
+        "unitPrice": 169,
+        "base": "Assorted",
+        "name": "Cookie Crumble",
+        "qty": 1,
+        "qtyKey": "6 Pieces"
+      }
+    ],
+    "packageFee": 35,
+    "deliveryFee": 55,
+    "subtotal": 169,
+    "totalAmount": 259,
+    "upiRef": "UTR123456789012",
+    "screenshotUrl": "/uploads/receipts/SYAURA-92E5024A-receipt.png",
+    "paymentStatus": "Payment Under Verification",
+    "orderStatus": "Delivered",
+    "adminNotes": "",
+    "timeline": [
+      {
+        "step": 1,
+        "title": "Order Placed & Payment Uploaded",
+        "status": "completed",
+        "time": "2026-09-09T20:15:10.448Z",
+        "description": "Order received with 1 item(s). Payment proof submitted."
+      },
+      {
+        "step": 2,
+        "title": "Payment Verification & Admin Approval",
+        "status": "completed",
+        "time": "2026-09-09T20:16:40.904Z",
+        "description": "Our admin is verifying your UPI payment receipt."
+      },
+      {
+        "step": 3,
+        "title": "Artisanal Handcrafting",
+        "status": "completed",
+        "time": "2026-09-09T20:18:58.932Z",
+        "description": "Small batch freshly tempered chocolate crafting."
+      },
+      {
+        "step": 4,
+        "title": "Out for Delivery (Kalyan)",
+        "status": "completed",
+        "time": "2026-09-09T20:19:44.663Z",
+        "description": "Scheduled for delivery on 2026-09-11."
+      },
+      {
+        "step": 5,
+        "title": "Delivered",
+        "status": "completed",
+        "time": "2026-09-09T20:19:44.663Z",
+        "description": "Enjoy your handcrafted luxury chocolates!"
+      }
+    ]
+  }
+]

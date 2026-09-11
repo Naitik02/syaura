@@ -1,0 +1,72 @@
+[
+  {
+    "id": "REV-001",
+    "name": "Shreya K.",
+    "city": "Mumbai",
+    "rating": 5,
+    "chocolate": "Cookie Crumble & Almond Crush",
+    "review": "The most exquisite box to gift! The artisanal keepsake box looks so royal, and the Cookie Crumble truffles and Almond chocolates were gone in minutes. Truly handcrafted luxury in every bite.",
+    "createdAt": "2026-09-07T14:30:00.000Z",
+    "verified": true
+  },
+  {
+    "id": "REV-002",
+    "name": "Rohan A.",
+    "city": "Thane",
+    "rating": 5,
+    "chocolate": "Modak Royale (21 Pcs)",
+    "review": "Ordered the 21-piece Modak Royale Box for Ganesh Chaturthi. Not only did it look stunning, the taste of dark chocolate with toasted nuts was out of this world!",
+    "createdAt": "2026-09-08T10:15:00.000Z",
+    "verified": true
+  },
+  {
+    "id": "REV-003",
+    "name": "Naman P.",
+    "city": "Kalyan",
+    "rating": 5,
+    "chocolate": "Biscoff Baby & Royal Heart",
+    "review": "The Biscoff Baby and Royal Heart chocolates are absolute perfection. Wrapped with genuine care and elegance, completely different from commercial brands. Will order again!",
+    "createdAt": "2026-09-08T18:40:00.000Z",
+    "verified": true
+  },
+  {
+    "id": "REV-004",
+    "name": "Pooja S.",
+    "city": "Navi Mumbai",
+    "rating": 5,
+    "chocolate": "Royal Crunch (Mix Dry Fruit)",
+    "review": "Ordered a 6-cavity box of Royal Crunch for my sister's birthday. The whole pistachios and roasted almond toppings on dark chocolate were incredible! Premium luxury packaging.",
+    "createdAt": "2026-09-09T09:20:00.000Z",
+    "verified": true
+  },
+  {
+    "id": "REV-005",
+    "name": "Aniket D.",
+    "city": "Kalyan",
+    "rating": 5,
+    "chocolate": "Nut & Noble (11-Bar Box)",
+    "review": "The 11-bar Nut & Noble box is seriously generous and rich. Every single bar was packed with dry fruits. Best handcrafted chocolate in Kalyan without a doubt!",
+    "createdAt": "2026-09-09T11:00:00.000Z",
+    "verified": true
+  },
+  {
+    "id": "REV-006",
+    "name": "Meera V.",
+    "city": "Mumbai",
+    "rating": 4,
+    "chocolate": "Cookie Heart (Oreo Heart)",
+    "review": "Beautiful packaging and the heart chocolates look so luxurious and elegant. The Oreo crunch inside smooth chocolate was delicious and loved by everyone at home.",
+    "createdAt": "2026-09-09T12:45:00.000Z",
+    "verified": true
+  },
+  {
+    "id": "REV-51F562E2",
+    "name": "Sneha Kapoor",
+    "city": "Thane West",
+    "rating": 5,
+    "chocolate": "Biscoff Baby (Biscoff Chocolate)",
+    "review": "Absolutely sensational taste! The crunchy Biscoff topping on creamy white chocolate was a showstopper at our anniversary dinner. Highly recommended!",
+    "createdAt": "2026-09-09T13:25:15.708Z",
+    "verified": true
+  }
+]

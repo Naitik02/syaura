@@ -1,0 +1,48 @@
+[
+  {
+    "id": "SYAURA-A1E173C3",
+    "createdAt": "2026-09-08T05:36:08.793Z",
+    "name": "Test Buyer",
+    "phone": "9999988888",
+    "area": "Kalyan",
+    "selection": "6-Piece Gift Box",
+    "notes": "",
+    "status": "Pending Contact"
+  },
+  {
+    "id": "SYAURA-3BEA2CA0",
+    "createdAt": "2026-09-08T12:53:59.544Z",
+    "name": "Priya Sharma",
+    "phone": "+919876543210",
+    "area": "Thane West",
+    "selection": "21-Piece Modak Box + 6-Piece Biscoff",
+    "notes": "Customer requested delivery on Friday",
+    "status": "Order Confirmed"
+  },
+  {
+    "id": "SYAURA-DD6E5383",
+    "createdAt": "2026-09-09T10:55:17.525Z",
+    "name": "Aarav Patel",
+    "phone": "+91 98765 43210",
+    "area": "Kalyan West",
+    "selection": "cookie-crumble",
+    "base": "Assorted (Mixed)",
+    "quantity": "6 Pieces",
+    "price": "149",
+    "notes": "Please include a golden satin ribbon and complimentary greeting card.",
+    "status": "Pending Contact"
+  },
+  {
+    "id": "SYAURA-2B4F4161",
+    "createdAt": "2026-09-09T11:05:32.836Z",
+    "name": "Rhea Sharma",
+    "phone": "+91 99887 76655",
+    "area": "Thane West",
+    "selection": "biscoff-baby",
+    "base": "Ivory White",
+    "quantity": "6 Pieces",
+    "price": "239",
+    "notes": "Please send fresh batch in green 6-cavity box.",
+    "status": "Pending Contact"
+  }
+]
