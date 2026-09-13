@@ -4933,41 +4933,177 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   MOBILE UI OPTIMIZATIONS & REFINED HEADING TYPOGRAPHY
+   Hero Perks Row (de-inlined from HTML)
    ========================================================================== */
+.hero-perks-row {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-perk-pill {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.14);
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Serving Banner (de-inlined from HTML)
+   ========================================================================== */
+.serving-banner {
+  background: linear-gradient(135deg, rgba(19, 42, 30, 0.85) 0%, rgba(9, 21, 15, 0.95) 100%);
+  border: 1.5px solid var(--border-gold);
+  border-radius: 16px;
+  padding: 16px 24px;
+  text-align: center;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.serving-banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.serving-label {
+  color: var(--gold-light);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.serving-cities {
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(212, 175, 55, 0.15);
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-gold);
+}
+
+.serving-notice {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+  line-height: 1.55;
+}
+
+.serving-notice strong {
+  color: var(--gold-light);
+}
+
+.serving-delivery-pill {
+  color: var(--gold-light);
+  font-weight: 700;
+  font-size: 13px;
+  background: rgba(212, 175, 55, 0.18);
+  padding: 4px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   Floating Showcase CTA Row (de-inlined from HTML)
+   ========================================================================== */
+.floating-cta-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   NUCLEAR MOBILE UI FIX — Comprehensive Mobile-First Hardening
+   ========================================================================== */
+
+/* CRITICAL: Prevent ALL horizontal overflow site-wide */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* ===== MOBILE: 768px and below ===== */
 @media (max-width: 768px) {
-  /* Prevent horizontal blowout & add bottom padding for fixed mobile CTA */
+
+  /* Global mobile resets */
   body {
     padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    font-size: 15px;
   }
 
-  /* Header & Branding — Clean & Uncluttered */
+  .section {
+    padding: 60px 16px !important;
+  }
+
+  .container {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .section-header {
+    margin-bottom: 36px !important;
+    padding: 0 4px !important;
+  }
+
+  /* ──── Announcement Bar ──── */
+  .announcement-bar {
+    font-size: 9px !important;
+    padding: 7px 12px !important;
+    letter-spacing: 0.1em !important;
+    gap: 6px !important;
+    line-height: 1.5;
+    white-space: normal !important;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  /* ──── Header & Branding ──── */
   .site-header {
-    padding: 10px 0;
+    padding: 8px 0 !important;
+    height: 64px !important;
   }
 
   .nav-container {
-    padding: 0 16px;
+    padding: 0 14px !important;
   }
 
   .brand-logo {
-    max-width: calc(100% - 65px);
+    max-width: calc(100% - 60px) !important;
   }
 
   .brand-logo .brand-name {
-    font-size: 1.35rem;
+    font-size: 1.25rem !important;
   }
 
   .brand-logo .brand-tagline {
-    font-size: 8px;
-    letter-spacing: 0.08em;
+    font-size: 7.5px !important;
+    letter-spacing: 0.06em !important;
     display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
   }
 
-  /* Hide header CTA button on mobile to avoid squishing logo and duplicating fixed bottom bar */
   .header-cta .btn-gold {
     display: none !important;
   }
@@ -4982,98 +5118,238 @@ body.modal-open {
     border-radius: 10px;
   }
 
-  /* Hero Section */
+  /* ──── Mobile Nav Overlay ──── */
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-links.open {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed !important;
+    top: 64px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(11, 24, 17, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-top: 1px solid var(--border-gold);
+    padding: 28px 24px !important;
+    gap: 6px !important;
+    z-index: 9999 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links.open a {
+    font-size: 16px !important;
+    padding: 14px 16px !important;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+    display: block;
+  }
+
+  .nav-links.open a:hover,
+  .nav-links.open a.active {
+    background: rgba(212, 175, 55, 0.1);
+  }
+
+  /* ──── Hero Section ──── */
   .hero-section {
-    padding: 85px 16px 50px;
-    min-height: auto;
+    padding: 80px 16px 44px !important;
+    min-height: auto !important;
+  }
+
+  .hero-ambient-glow {
+    width: 300px !important;
+    height: 300px !important;
   }
 
   .hero-badge {
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    padding: 5px 12px;
-    margin-bottom: 12px;
+    font-size: 9.5px !important;
+    letter-spacing: 0.1em !important;
+    padding: 5px 12px !important;
+    margin-bottom: 14px !important;
   }
 
   .hero-subtitle-lead {
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    margin-bottom: 6px;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.18em !important;
+    margin-bottom: 6px !important;
   }
 
   .hero-title {
-    font-size: clamp(1.9rem, 7.5vw, 2.5rem);
-    line-height: 1.15;
-    margin-bottom: 10px;
+    font-size: clamp(1.85rem, 8vw, 2.4rem) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 8px !important;
   }
 
   .hero-title .brand-accent {
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03em !important;
   }
 
   .hero-title .hero-tagline {
-    font-size: clamp(0.68rem, 2.6vw, 0.8rem);
-    letter-spacing: 0.12em;
-    line-height: 1.4;
-    margin-top: 10px;
-    max-width: 320px;
+    font-size: clamp(0.62rem, 2.5vw, 0.78rem) !important;
+    letter-spacing: 0.1em !important;
+    line-height: 1.45 !important;
+    margin-top: 10px !important;
+    max-width: 300px !important;
   }
 
   .hero-lead {
-    font-size: 0.92rem;
-    line-height: 1.6;
-    margin: 14px auto 20px;
-    padding: 0 4px;
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    margin: 12px auto 20px !important;
+    padding: 0 4px !important;
   }
 
   .hero-actions {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
   }
 
   .hero-actions .btn-gold,
   .hero-actions .btn-outline {
-    width: 100%;
-    max-width: 320px;
-    padding: 13px 20px;
-    font-size: 13.5px;
-    text-align: center;
-    justify-content: center;
+    width: 100% !important;
+    max-width: 320px !important;
+    padding: 13px 20px !important;
+    font-size: 13px !important;
+    text-align: center !important;
+    justify-content: center !important;
   }
 
-  .hero-perks-row {
-    gap: 6px;
-    flex-wrap: wrap;
-    justify-content: center;
+  /* Hero perks (inline-styled in HTML — must use !important) */
+  .hero-perks-row,
+  [class*="hero-perks"] {
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin-top: 16px !important;
   }
 
-  .hero-perks-row span {
-    font-size: 10px;
-    padding: 4px 10px;
+  .hero-perks-row > span,
+  .hero-perks-row > * {
+    font-size: 9.5px !important;
+    padding: 4px 9px !important;
   }
 
-  /* Floating Showcase in Hero / Spotlight */
+  .hero-scroll-indicator {
+    display: none !important;
+  }
+
+  /* ──── Metrics Bar ──── */
+  .metrics-bar {
+    padding: 22px 14px !important;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .metric-value {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+  }
+
+  .metric-label {
+    font-size: 10px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .metric-item:nth-child(2)::after {
+    display: none !important;
+  }
+
+  /* ──── About Section ──── */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .about-copy .section-title {
+    font-size: clamp(1.4rem, 5.5vw, 1.85rem) !important;
+    text-align: left !important;
+  }
+
+  .about-lead {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin: 12px 0 10px !important;
+  }
+
+  .about-copy p {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .pill-tags {
+    gap: 6px !important;
+    margin: 18px 0 24px !important;
+  }
+
+  .pill-tag {
+    font-size: 11px !important;
+    padding: 5px 12px !important;
+  }
+
+  .about-mosaic {
+    gap: 10px !important;
+  }
+
+  .mosaic-1, .mosaic-2 {
+    height: 180px !important;
+  }
+
+  .mosaic-2 {
+    margin-top: 0 !important;
+  }
+
+  .mosaic-wide {
+    height: 160px !important;
+  }
+
+  /* ──── Floating Showcase ──── */
   .floating-showcase-container {
     grid-template-columns: 1fr !important;
-    padding: 22px 16px !important;
-    gap: 22px !important;
-    border-radius: 24px !important;
+    padding: 20px 14px !important;
+    gap: 18px !important;
+    border-radius: 20px !important;
+    margin-top: 24px !important;
   }
 
   .floating-visual-wrap {
-    height: clamp(240px, 60vw, 320px) !important;
-    border-radius: 16px !important;
-    padding: 8px !important;
+    height: clamp(220px, 55vw, 300px) !important;
+    border-radius: 14px !important;
+    padding: 6px !important;
+  }
+
+  .floating-badge-overlay {
+    bottom: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+    padding: 8px 12px !important;
+    border-radius: 10px !important;
+  }
+
+  .floating-badge-overlay span {
+    font-size: 0.95rem !important;
+  }
+
+  .floating-badge-overlay small {
+    font-size: 9px !important;
   }
 
   .floating-flavour-switcher {
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
-    gap: 8px !important;
-    padding: 4px 2px 10px !important;
+    gap: 7px !important;
+    padding: 4px 0 10px !important;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -5085,258 +5361,685 @@ body.modal-open {
   .flavour-pill-btn {
     white-space: nowrap !important;
     flex-shrink: 0 !important;
-    font-size: 12.5px !important;
-    padding: 7px 15px !important;
+    font-size: 12px !important;
+    padding: 7px 14px !important;
+  }
+
+  .floating-copy-wrap h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .floating-copy-wrap p {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
   }
 
   .floating-pills-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
   }
 
   .floating-pill {
-    font-size: 11px !important;
-    padding: 4px 10px !important;
+    font-size: 10.5px !important;
+    padding: 4px 9px !important;
   }
 
-  /* Section Headings */
+  /* ──── Feature Tri-Grid (3 Cards) ──── */
+  .feature-tri-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    margin-top: 28px !important;
+  }
+
+  .feature-card-img {
+    height: 200px !important;
+  }
+
+  .feature-card-body {
+    padding: 20px !important;
+  }
+
+  .feature-card-body h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .feature-card-body p {
+    font-size: 0.85rem !important;
+    margin-bottom: 14px !important;
+  }
+
+  .feature-price-badge {
+    font-size: 1rem !important;
+  }
+
+  /* ──── Section Headings ──── */
   .section-title {
-    font-size: clamp(1.5rem, 5.2vw, 1.95rem);
-    line-height: 1.2;
-    margin-bottom: 12px;
+    font-size: clamp(1.4rem, 5.5vw, 1.9rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important;
   }
 
   .section-desc {
-    font-size: 0.92rem;
-    line-height: 1.55;
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
   }
 
   .eyebrow {
-    font-size: 10px;
-    letter-spacing: 0.16em;
-    margin-bottom: 8px;
+    font-size: 10px !important;
+    letter-spacing: 0.14em !important;
+    margin-bottom: 8px !important;
   }
 
-  /* About Us */
-  .about-copy .section-title {
-    font-size: clamp(1.5rem, 5.2vw, 1.9rem);
+  /* ──── Menu Section ──── */
+  .menu-view-switcher {
+    flex-direction: column !important;
+    border-radius: 16px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+    max-width: 100% !important;
+    margin: 18px 0 28px !important;
   }
 
-  .about-lead {
-    font-size: 1.02rem;
-    line-height: 1.5;
-    margin: 14px 0 12px;
+  .view-tab-btn {
+    width: 100% !important;
+    border-radius: 12px !important;
+    padding: 11px 16px !important;
+    font-size: 12px !important;
   }
 
-  .about-copy p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+  .menu-category-wrapper {
+    margin-top: 30px !important;
   }
 
-  /* Menu Tabs & Product Cards */
-  .menu-category-tabs,
-  .gallery-filter-tabs {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 8px !important;
-    padding-bottom: 10px !important;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+  .menu-category-title-group h3 {
+    font-size: 1.3rem !important;
   }
 
-  .menu-category-tabs::-webkit-scrollbar,
-  .gallery-filter-tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .menu-tab-btn,
-  .gallery-tab-btn {
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-    font-size: 13px !important;
-    padding: 9px 18px !important;
+  .menu-category-title-group p {
+    font-size: 10px !important;
   }
 
   .menu-duo-grid {
     grid-template-columns: 1fr !important;
-    gap: 18px !important;
+    gap: 16px !important;
+    margin-bottom: 32px !important;
   }
 
   .menu-product-card {
-    padding: 18px !important;
+    padding: 16px !important;
     border-radius: 18px !important;
   }
 
   .card-img-container {
-    height: clamp(200px, 50vw, 260px) !important;
+    height: clamp(190px, 48vw, 250px) !important;
+    border-radius: 14px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .card-title-row {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
   }
 
   .card-title-row h4 {
-    font-size: 1.15rem;
+    font-size: 1.12rem !important;
   }
 
   .card-flavour-tag {
-    font-size: 0.82rem;
+    font-size: 0.8rem !important;
   }
 
   .card-desc-brief {
-    font-size: 0.82rem;
-    line-height: 1.45;
+    font-size: 0.8rem !important;
+    line-height: 1.45 !important;
   }
 
-  /* Product Modal — Complete Mobile Hardening */
+  .card-footer-row {
+    margin-top: 14px !important;
+    padding-top: 12px !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .card-price-val {
+    font-size: 1.35rem !important;
+  }
+
+  .card-action-btn {
+    font-size: 10.5px !important;
+    padding: 5px 12px !important;
+  }
+
+  /* ──── Serving Cities Banner (inline-styled in HTML) ──── */
+  .menu-section > .container > div[style*="linear-gradient"] {
+    padding: 14px 16px !important;
+    border-radius: 14px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* ──── Product Modal ──── */
   .product-modal-backdrop {
-    padding: 14px 10px !important;
+    padding: 10px 8px !important;
+    align-items: flex-start !important;
   }
 
   .product-modal-dialog {
-    width: 96% !important;
-    max-width: 520px !important;
-    max-height: 88vh !important;
-    padding: 24px 16px 20px !important;
-    border-radius: 22px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 92vh !important;
+    padding: 20px 14px 18px !important;
+    border-radius: 20px !important;
     margin: auto !important;
     -webkit-overflow-scrolling: touch;
   }
 
   .modal-close-btn {
-    top: 14px !important;
-    right: 14px !important;
-    width: 36px !important;
-    height: 36px !important;
-    font-size: 18px !important;
+    top: 12px !important;
+    right: 12px !important;
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 17px !important;
+    z-index: 20 !important;
   }
 
   .product-modal-grid {
     grid-template-columns: 1fr !important;
-    gap: 18px !important;
+    gap: 16px !important;
   }
 
   .modal-main-img-wrap {
-    height: clamp(210px, 54vw, 290px) !important;
-    border-radius: 16px !important;
-    padding: 10px !important;
+    height: clamp(200px, 50vw, 270px) !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
   }
 
   .modal-thumb-strip {
-    gap: 8px !important;
+    gap: 6px !important;
+    padding-bottom: 6px !important;
   }
 
-  .modal-thumb {
-    width: 52px !important;
-    height: 52px !important;
-    border-radius: 10px !important;
+  .modal-thumb,
+  .modal-thumb-item {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    max-width: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    border-radius: 8px !important;
+  }
+
+  .modal-header-meta {
+    gap: 6px !important;
+  }
+
+  .modal-badge,
+  .modal-shape-tag {
+    font-size: 10px !important;
+    padding: 3px 8px !important;
   }
 
   .modal-title {
-    font-size: 1.25rem !important;
-    line-height: 1.2;
+    font-size: 1.2rem !important;
+    line-height: 1.2 !important;
   }
 
   .modal-flavour {
-    font-size: 0.84rem !important;
+    font-size: 0.82rem !important;
   }
 
   .modal-desc {
-    font-size: 0.84rem !important;
-    line-height: 1.5;
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    padding-left: 12px !important;
   }
 
-  /* 2x2 Grid for Base Selection Chips */
+  .selector-label {
+    font-size: 11px !important;
+  }
+
   .base-chips-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px !important;
+    gap: 7px !important;
   }
 
   .base-chip {
-    padding: 10px 8px !important;
-    font-size: 12px !important;
+    padding: 9px 6px !important;
+    font-size: 11.5px !important;
     justify-content: center !important;
     text-align: center !important;
     border-radius: 10px !important;
-    min-height: 42px !important;
+    min-height: 40px !important;
+    gap: 4px !important;
   }
 
   .quantity-chips-flex {
-    gap: 8px !important;
+    gap: 7px !important;
   }
 
   .qty-chip {
-    padding: 8px 16px !important;
-    font-size: 12.5px !important;
+    padding: 8px 14px !important;
+    font-size: 12px !important;
     border-radius: 10px !important;
   }
 
   .modal-price-box {
-    padding: 14px 16px !important;
-    border-radius: 14px !important;
+    padding: 12px 14px !important;
+    border-radius: 12px !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    align-items: flex-start !important;
   }
 
   .modal-price-val {
-    font-size: 1.45rem !important;
+    font-size: 1.4rem !important;
   }
 
-  .modal-actions-row .btn-gold {
+  .modal-actions-row {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .modal-actions-row .btn-gold,
+  .modal-actions-row .btn-outline {
     width: 100% !important;
-    padding: 14px 18px !important;
-    font-size: 14px !important;
+    padding: 13px 18px !important;
+    font-size: 13.5px !important;
     justify-content: center !important;
     text-align: center !important;
   }
 
-  /* Price List Tables — Horizontal Scrolling Card */
+  /* ──── Price List Section ──── */
+  .pricelist-card-banner {
+    grid-template-columns: 1fr !important;
+    padding: 18px 14px !important;
+    gap: 18px !important;
+    border-radius: 18px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .pricelist-card-info h3 {
+    font-size: 1.15rem !important;
+  }
+
+  .pricelist-card-info p {
+    font-size: 0.85rem !important;
+  }
+
+  .pricelist-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
   .pricelist-table-card {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
-    border-radius: 16px !important;
+    border-radius: 14px !important;
   }
 
   .pricelist-table-header {
-    padding: 16px 18px !important;
+    padding: 14px 16px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
   }
 
   .pricelist-table-header h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem !important;
   }
 
   .official-price-table {
-    min-width: 500px !important;
+    min-width: 480px !important;
   }
 
   .official-price-table th,
   .official-price-table td {
-    padding: 12px 14px !important;
+    padding: 10px 12px !important;
+    font-size: 12px !important;
   }
 
   .price-product-title {
-    font-size: 0.95rem;
+    font-size: 0.9rem !important;
   }
 
   .price-product-flavour {
-    font-size: 0.8rem;
+    font-size: 0.75rem !important;
   }
 
   .price-val-tag {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
   }
 
-  /* Reviews & Promise */
-  .live-reviews-title {
-    font-size: 1.25rem;
+  .price-product-thumb {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* ──── Promise / Why SYAURA ──── */
+  .promise-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .promise-card {
+    padding: 30px 22px !important;
+    border-radius: 18px !important;
+  }
+
+  .promise-icon {
+    font-size: 36px !important;
+    margin-bottom: 14px !important;
   }
 
   .promise-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem !important;
+    margin-bottom: 10px !important;
   }
 
   .promise-card p {
-    font-size: 0.88rem;
-    line-height: 1.55;
+    font-size: 0.85rem !important;
+    line-height: 1.55 !important;
   }
 
-  /* Form inputs — minimum 16px font-size to prevent iOS Safari auto-zoom */
+  /* ──── Gallery Section ──── */
+  .gallery-filter-wrap {
+    gap: 6px !important;
+    margin-bottom: 22px !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    padding-bottom: 8px !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .gallery-filter-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-filter-btn {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+  }
+
+  .gallery-max-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .gallery-card-body {
+    padding: 16px 18px !important;
+  }
+
+  .gallery-card-name {
+    font-size: 1.1rem !important;
+  }
+
+  .gallery-card-price {
+    font-size: 1rem !important;
+  }
+
+  .gallery-card-desc {
+    font-size: 12px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .gallery-card-actions {
+    gap: 8px !important;
+  }
+
+  /* ──── Reviews Section ──── */
+  .reviews-calc-dashboard {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 22px 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .calc-score-box {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18) !important;
+    padding-right: 0 !important;
+    padding-bottom: 18px !important;
+  }
+
+  .calc-big-num {
+    font-size: 2.8rem !important;
+  }
+
+  .calc-cta-box {
+    border-left: none !important;
+    border-top: 1px solid rgba(212, 175, 55, 0.18) !important;
+    padding-left: 0 !important;
+    padding-top: 18px !important;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .review-card,
+  .review-luxury-card {
+    padding: 24px 20px !important;
+    border-radius: 18px !important;
+  }
+
+  .review-quote {
+    font-size: 1.05rem !important;
+  }
+
+  .review-form-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .review-upload-card {
+    padding: 24px 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .review-upload-title {
+    font-size: 1.3rem !important;
+  }
+
+  /* ──── Inquiry / Custom Gifting ──── */
+  .inquiry-section {
+    padding: 50px 0 !important;
+  }
+
+  .inquiry-section .container {
+    padding: 0 14px !important;
+  }
+
+  .inquiry-layout {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .inquiry-summary-card {
+    position: static !important;
+    padding: 22px 18px !important;
+  }
+
+  .inquiry-panel {
+    padding: 20px 16px !important;
+    border-radius: 18px !important;
+  }
+
+  .inquiry-occasion-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .occasion-card {
+    padding: 12px 12px !important;
+  }
+
+  .occasion-icon {
+    font-size: 18px !important;
+  }
+
+  .occasion-title {
+    font-size: 12.5px !important;
+  }
+
+  .occasion-sub {
+    font-size: 10px !important;
+  }
+
+  .inquiry-chips-wrap {
+    gap: 7px !important;
+  }
+
+  .flavour-chip {
+    font-size: 12px !important;
+    padding: 7px 12px !important;
+  }
+
+  .inquiry-base-chips {
+    gap: 7px !important;
+  }
+
+  .inquiry-base-btn {
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+  }
+
+  .inquiry-qty-chips {
+    gap: 6px !important;
+  }
+
+  .inquiry-qty-btn {
+    font-size: 11.5px !important;
+    padding: 8px 14px !important;
+  }
+
+  .inquiry-addons-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .form-row-2col {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .inquiry-tab-pill-wrap {
+    width: 100% !important;
+    flex-direction: column !important;
+    border-radius: 16px !important;
+    gap: 6px !important;
+  }
+
+  .inquiry-tab-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    border-radius: 12px !important;
+    font-size: 13px !important;
+  }
+
+  .inquiry-track-card {
+    padding: 26px 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .track-title {
+    font-size: 1.35rem !important;
+  }
+
+  .track-search-bar {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .track-result-wrap {
+    padding: 18px 14px !important;
+  }
+
+  /* ──── Footer ──── */
+  .site-footer {
+    padding: 50px 16px 28px !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    margin-bottom: 36px !important;
+  }
+
+  .footer-brand p {
+    font-size: 13.5px !important;
+    max-width: 100% !important;
+  }
+
+  .footer-col h4 {
+    font-size: 1.15rem !important;
+    margin-bottom: 14px !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 10px !important;
+    text-align: center !important;
+    font-size: 10px !important;
+  }
+
+  /* ──── Instagram Floating Button ──── */
+  .insta-floating-btn {
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+    left: 14px !important;
+    right: 14px !important;
+    width: calc(100% - 28px) !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 14px 18px !important;
+    font-size: 13px !important;
+    border-radius: 999px !important;
+  }
+
+  /* ──── Instagram Prompt Modal ──── */
+  .insta-prompt-card {
+    padding: 22px 18px !important;
+    border-radius: 18px !important;
+    max-width: 100% !important;
+  }
+
+  .insta-prompt-title {
+    font-size: 18px !important;
+  }
+
+  .insta-prompt-sub {
+    font-size: 12.5px !important;
+  }
+
+  .insta-prompt-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .insta-prompt-actions .btn-gold,
+  .insta-prompt-actions .btn-outline {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* ──── Inquiry Success Modal ──── */
+  .inquiry-success-modal .product-modal-dialog,
+  #inquirySuccessModal .product-modal-dialog {
+    padding: 24px 18px !important;
+  }
+
+  /* ──── Price Card Lightbox Modal ──── */
+  .price-card-modal-backdrop {
+    padding: 10px !important;
+  }
+
+  /* ──── Form inputs — 16px min to prevent iOS Safari auto-zoom ──── */
   input, select, textarea,
   .form-input, .form-select, .form-textarea,
   .track-input {
@@ -5344,41 +6047,107 @@ body.modal-open {
   }
 }
 
+/* ===== EXTRA SMALL: 480px and below ===== */
 @media (max-width: 480px) {
   .hero-title {
-    font-size: clamp(1.8rem, 7.8vw, 2.2rem);
+    font-size: clamp(1.7rem, 8.5vw, 2.1rem) !important;
   }
 
   .hero-title .hero-tagline {
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    max-width: 290px;
-    line-height: 1.4;
+    font-size: 0.62rem !important;
+    letter-spacing: 0.08em !important;
+    max-width: 270px !important;
   }
 
   .section-title {
-    font-size: clamp(1.35rem, 5.8vw, 1.65rem);
-    line-height: 1.22;
+    font-size: clamp(1.25rem, 6vw, 1.55rem) !important;
+    line-height: 1.22 !important;
   }
 
   .about-copy .section-title {
-    font-size: clamp(1.35rem, 5.6vw, 1.62rem);
+    font-size: clamp(1.25rem, 5.8vw, 1.52rem) !important;
   }
 
   .card-title-row h4 {
-    font-size: 1.1rem;
+    font-size: 1.05rem !important;
   }
 
   .modal-title {
-    font-size: 1.2rem !important;
+    font-size: 1.12rem !important;
   }
 
   .hero-section {
-    padding: 80px 14px 44px;
+    padding: 72px 12px 36px !important;
   }
 
   .base-chip {
-    font-size: 11.5px !important;
-    padding: 8px 6px !important;
+    font-size: 11px !important;
+    padding: 7px 5px !important;
+  }
+
+  .announcement-bar {
+    font-size: 8px !important;
+    padding: 6px 10px !important;
+  }
+
+  .metrics-grid {
+    gap: 12px !important;
+  }
+
+  .metric-value {
+    font-size: clamp(1.3rem, 5.5vw, 1.7rem) !important;
+  }
+
+  .inquiry-occasion-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .occasion-card {
+    padding: 11px 12px !important;
+  }
+
+  .feature-card-img {
+    height: 170px !important;
+  }
+
+  .floating-visual-wrap {
+    height: clamp(190px, 50vw, 260px) !important;
+  }
+
+  .gallery-card-title-row {
+    flex-direction: column !important;
+    gap: 2px !important;
+  }
+}
+
+/* ===== VERY SMALL: 360px and below (tiny phones) ===== */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-badge {
+    font-size: 8.5px !important;
+    padding: 4px 8px !important;
+  }
+
+  .brand-logo .brand-name {
+    font-size: 1.1rem !important;
+  }
+
+  .brand-logo .brand-tagline {
+    font-size: 7px !important;
+  }
+
+  .section-title {
+    font-size: 1.2rem !important;
+  }
+
+  .card-img-container {
+    height: 180px !important;
+  }
+
+  .base-chip {
+    font-size: 10.5px !important;
   }
 }

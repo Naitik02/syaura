@@ -111,10 +111,10 @@
             <a href="#menu" class="btn-gold">Explore Price Menu</a>
             <button onclick="buyOnInstagram()" class="btn-outline">Buy through Instagram ↗</button>
           </div>
-          <div class="hero-perks-row" style="margin-top: 22px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-            <span style="font-family: var(--font-mono); font-size: 11.5px; color: var(--gold-light); background: rgba(212,175,55,0.14); padding: 5px 14px; border-radius: 999px; border: 1px solid rgba(212,175,55,0.3); display: inline-flex; align-items: center; gap: 6px;">🚚 Free Delivery on Orders Above ₹999</span>
-            <span style="font-family: var(--font-mono); font-size: 11.5px; color: var(--gold-light); background: rgba(212,175,55,0.14); padding: 5px 14px; border-radius: 999px; border: 1px solid rgba(212,175,55,0.3); display: inline-flex; align-items: center; gap: 6px;">✦ 100% Handcrafted Fresh</span>
-            <span style="font-family: var(--font-mono); font-size: 11.5px; color: var(--gold-light); background: rgba(212,175,55,0.14); padding: 5px 14px; border-radius: 999px; border: 1px solid rgba(212,175,55,0.3); display: inline-flex; align-items: center; gap: 6px;">🎁 Luxury Keepsake Box</span>
+          <div class="hero-perks-row">
+            <span class="hero-perk-pill">🚚 Free Delivery on Orders Above ₹999</span>
+            <span class="hero-perk-pill">✦ 100% Handcrafted Fresh</span>
+            <span class="hero-perk-pill">🎁 Luxury Keepsake Box</span>
           </div>
         </div>
         <a href="#about" class="hero-scroll-indicator animate-bounce-down" aria-label="Scroll to discover">
@@ -236,7 +236,7 @@
                 <span class="floating-pill">✦ 4 &amp; 6 Piece Gift Boxes</span>
                 <span class="floating-pill">✦ Artisanal Keepsake Box</span>
               </div>
-              <div style="display: flex; gap: 14px; align-items: center; margin-top: 10px;">
+              <div class="floating-cta-row">
                 <button class="btn-gold" id="floatingExploreBtn" onclick="openProductModal('almond-crush')">Explore Almond Crush ✦</button>
                 <a href="#menu" class="btn-outline">View Full Menu ↓</a>
               </div>
@@ -315,18 +315,18 @@
 
           <!-- View Switcher: Visual Menu Cards vs Official Price List -->
           <!-- Cities Served & Ordering Advance Notice Banner -->
-          <div style="background: linear-gradient(135deg, rgba(19,42,30,0.85) 0%, rgba(9,21,15,0.95) 100%); border: 1.5px solid var(--border-gold); border-radius: 16px; padding: 16px 24px; text-align: center; margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.45);">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px;">
-              <span style="color: var(--gold-light); font-weight: 700; font-size: 14px;">📍 CURRENTLY SERVING:</span>
-              <span style="color: #ffffff; font-family: var(--font-mono); font-size: 14px; font-weight: 600; background: rgba(212,175,55,0.15); padding: 3px 12px; border-radius: 999px; border: 1px solid var(--border-gold);">
+          <div class="serving-banner">
+            <div class="serving-banner-top">
+              <span class="serving-label">📍 CURRENTLY SERVING:</span>
+              <span class="serving-cities">
                 Ulhasnagar · Kalyan · Vitthalwadi · Ambernath · Badlapur
               </span>
             </div>
-            <p style="font-size: 12px; color: var(--text-muted); margin: 0 0 8px;">
-              ✦ Handcrafted fresh to order. Orders must be placed <strong style="color: var(--gold-light);">at least 1 day in advance</strong> to temper, set, and deliver authentic luxury.
+            <p class="serving-notice">
+              ✦ Handcrafted fresh to order. Orders must be placed <strong>at least 1 day in advance</strong> to temper, set, and deliver authentic luxury.
             </p>
             <div>
-              <span style="color: var(--gold-light); font-weight: 700; font-size: 13px; background: rgba(212,175,55,0.18); padding: 4px 14px; border-radius: 999px; border: 1px solid var(--border-gold); display: inline-flex; align-items: center; gap: 6px;">
+              <span class="serving-delivery-pill">
                 🚚 Free Delivery on Orders Above ₹999
               </span>
             </div>
