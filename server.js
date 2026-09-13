@@ -258,12 +258,12 @@ const products = [
       '/products/bases/biscoff-baby-dark.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Assorted Flavours', 'White Chocolate', 'Milk Chocolate', 'Dark Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
       'Assorted Flavours': '/products/floating/biscoff-baby-floating.png',
-      'White Chocolate': '/products/bases/biscoff-baby-white.jpg',
       'Milk Chocolate': '/products/bases/biscoff-baby-milk.jpg',
-      'Dark Chocolate': '/products/bases/biscoff-baby-dark.jpg'
+      'Dark Chocolate': '/products/bases/biscoff-baby-dark.jpg',
+      'White Chocolate': '/products/bases/biscoff-baby-white.jpg'
     },
     defaultQuantity: '4 Pieces',
     defaultBase: 'Assorted Flavours',
@@ -349,7 +349,7 @@ const products = [
     categoryTitle: 'The Artisan Bars',
     shape: 'modak',
     shapeLabel: 'Festive Modak · 21 Pcs',
-    description: 'Festive handcrafted chocolate modaks with whole almonds nestled inside, inspired by timeless sacred tradition and crafted with an artisanal royal touch.',
+    description: 'Festive handcrafted chocolate modaks with 1–2 whole almonds nestled inside, inspired by timeless sacred tradition and crafted with an artisanal royal touch.',
     badge: 'Festive Drop',
     image: '/products/floating/modak-royale-studio.jpg',
     cutout: '/products/floating/modak-royale-floating.png',
@@ -422,7 +422,7 @@ const products = [
     shape: 'heart',
     shapeLabel: 'Diamond Heart · 12 & 18 Pcs',
     description: 'A delicate faceted 3D heart filled with premium mix dry fruits, wrapped in smooth, rich chocolate.',
-    badge: 'Pure Luxury',
+    badge: 'Royal Indulgence',
     image: '/products/floating/royal-heart-studio.jpg',
     cutout: '/products/floating/royal-heart-isolated.png',
     floating: '/products/floating/royal-heart-isolated.png',

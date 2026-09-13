@@ -4723,6 +4723,16 @@ html.lenis, html.lenis body {
   text-decoration: none;
 }
 
+/* Hide floating button when modal or mobile drawer is open to prevent duplicate buttons */
+body.modal-open .insta-floating-btn,
+body.menu-open .insta-floating-btn {
+  display: none !important;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 .insta-floating-btn:hover {
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 16px 45px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.45);
@@ -4745,10 +4755,15 @@ html.lenis, html.lenis body {
 
 @media (max-width: 640px) {
   .insta-floating-btn {
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 18px;
-    font-size: 13px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    left: 16px;
+    right: 16px;
+    width: calc(100% - 32px);
+    justify-content: center;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 13.5px;
+    border-radius: 999px;
   }
 }
 
@@ -4921,19 +4936,56 @@ html.lenis, html.lenis body {
    MOBILE UI OPTIMIZATIONS & REFINED HEADING TYPOGRAPHY
    ========================================================================== */
 @media (max-width: 768px) {
-  /* Header & Branding */
+  /* Prevent horizontal blowout & add bottom padding for fixed mobile CTA */
+  body {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Header & Branding — Clean & Uncluttered */
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .brand-logo {
+    max-width: calc(100% - 65px);
+  }
+
   .brand-logo .brand-name {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 
   .brand-logo .brand-tagline {
     font-size: 8px;
     letter-spacing: 0.08em;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Hide header CTA button on mobile to avoid squishing logo and duplicating fixed bottom bar */
+  .header-cta .btn-gold {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 10px;
   }
 
   /* Hero Section */
   .hero-section {
-    padding: 90px 20px 60px;
+    padding: 85px 16px 50px;
+    min-height: auto;
   }
 
   .hero-badge {
@@ -4950,8 +5002,8 @@ html.lenis, html.lenis body {
   }
 
   .hero-title {
-    font-size: clamp(2rem, 7vw, 2.75rem);
-    line-height: 1.1;
+    font-size: clamp(1.9rem, 7.5vw, 2.5rem);
+    line-height: 1.15;
     margin-bottom: 10px;
   }
 
@@ -4960,7 +5012,7 @@ html.lenis, html.lenis body {
   }
 
   .hero-title .hero-tagline {
-    font-size: clamp(0.68rem, 2.6vw, 0.82rem);
+    font-size: clamp(0.68rem, 2.6vw, 0.8rem);
     letter-spacing: 0.12em;
     line-height: 1.4;
     margin-top: 10px;
@@ -4968,84 +5020,165 @@ html.lenis, html.lenis body {
   }
 
   .hero-lead {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     line-height: 1.6;
-    margin: 16px auto 22px;
-    padding: 0 6px;
+    margin: 14px auto 20px;
+    padding: 0 4px;
   }
 
   .hero-actions {
+    flex-direction: column;
+    align-items: center;
     gap: 12px;
+    width: 100%;
   }
 
   .hero-actions .btn-gold,
   .hero-actions .btn-outline {
     width: 100%;
-    max-width: 280px;
-    padding: 12px 20px;
+    max-width: 320px;
+    padding: 13px 20px;
     font-size: 13.5px;
     text-align: center;
+    justify-content: center;
   }
 
   .hero-perks-row {
-    gap: 8px;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero-perks-row span {
-    font-size: 10.5px;
+    font-size: 10px;
     padding: 4px 10px;
+  }
+
+  /* Floating Showcase in Hero / Spotlight */
+  .floating-showcase-container {
+    grid-template-columns: 1fr !important;
+    padding: 22px 16px !important;
+    gap: 22px !important;
+    border-radius: 24px !important;
+  }
+
+  .floating-visual-wrap {
+    height: clamp(240px, 60vw, 320px) !important;
+    border-radius: 16px !important;
+    padding: 8px !important;
+  }
+
+  .floating-flavour-switcher {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 8px !important;
+    padding: 4px 2px 10px !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .floating-flavour-switcher::-webkit-scrollbar {
+    display: none;
+  }
+
+  .flavour-pill-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 12.5px !important;
+    padding: 7px 15px !important;
+  }
+
+  .floating-pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .floating-pill {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
   }
 
   /* Section Headings */
   .section-title {
-    font-size: clamp(1.55rem, 5vw, 2.05rem);
+    font-size: clamp(1.5rem, 5.2vw, 1.95rem);
     line-height: 1.2;
     margin-bottom: 12px;
   }
 
   .section-desc {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     line-height: 1.55;
   }
 
   .eyebrow {
-    font-size: 10.5px;
+    font-size: 10px;
     letter-spacing: 0.16em;
     margin-bottom: 8px;
   }
 
   /* About Us */
   .about-copy .section-title {
-    font-size: clamp(1.55rem, 5.2vw, 1.95rem);
+    font-size: clamp(1.5rem, 5.2vw, 1.9rem);
   }
 
   .about-lead {
-    font-size: 1.08rem;
+    font-size: 1.02rem;
     line-height: 1.5;
-    margin: 16px 0 12px;
+    margin: 14px 0 12px;
   }
 
   .about-copy p {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     line-height: 1.6;
   }
 
-  /* Menu Categories */
-  .menu-category-title-group h3 {
-    font-size: 1.25rem;
+  /* Menu Tabs & Product Cards */
+  .menu-category-tabs,
+  .gallery-filter-tabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 8px !important;
+    padding-bottom: 10px !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
-  .menu-category-title-group p {
-    font-size: 10px;
-    letter-spacing: 0.1em;
+  .menu-category-tabs::-webkit-scrollbar,
+  .gallery-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-tab-btn,
+  .gallery-tab-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 13px !important;
+    padding: 9px 18px !important;
+  }
+
+  .menu-duo-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .menu-product-card {
+    padding: 18px !important;
+    border-radius: 18px !important;
+  }
+
+  .card-img-container {
+    height: clamp(200px, 50vw, 260px) !important;
   }
 
   .card-title-row h4 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .card-flavour-tag {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 
   .card-desc-brief {
@@ -5053,38 +5186,140 @@ html.lenis, html.lenis body {
     line-height: 1.45;
   }
 
-  /* Gallery Cards */
-  .gallery-card-name {
-    font-size: 1.2rem;
+  /* Product Modal — Complete Mobile Hardening */
+  .product-modal-backdrop {
+    padding: 14px 10px !important;
   }
 
-  .gallery-card-flavour {
-    font-size: 0.82rem;
+  .product-modal-dialog {
+    width: 96% !important;
+    max-width: 520px !important;
+    max-height: 88vh !important;
+    padding: 24px 16px 20px !important;
+    border-radius: 22px !important;
+    margin: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .gallery-card-desc {
-    font-size: 0.82rem;
-    line-height: 1.45;
+  .modal-close-btn {
+    top: 14px !important;
+    right: 14px !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 18px !important;
   }
 
-  /* Modal Heading & Content */
+  .product-modal-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .modal-main-img-wrap {
+    height: clamp(210px, 54vw, 290px) !important;
+    border-radius: 16px !important;
+    padding: 10px !important;
+  }
+
+  .modal-thumb-strip {
+    gap: 8px !important;
+  }
+
+  .modal-thumb {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 10px !important;
+  }
+
   .modal-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem !important;
     line-height: 1.2;
   }
 
   .modal-flavour {
-    font-size: 0.88rem;
+    font-size: 0.84rem !important;
   }
 
   .modal-desc {
-    font-size: 0.88rem;
+    font-size: 0.84rem !important;
     line-height: 1.5;
   }
 
+  /* 2x2 Grid for Base Selection Chips */
+  .base-chips-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
   .base-chip {
-    padding: 7px 12px;
-    font-size: 12px;
+    padding: 10px 8px !important;
+    font-size: 12px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    border-radius: 10px !important;
+    min-height: 42px !important;
+  }
+
+  .quantity-chips-flex {
+    gap: 8px !important;
+  }
+
+  .qty-chip {
+    padding: 8px 16px !important;
+    font-size: 12.5px !important;
+    border-radius: 10px !important;
+  }
+
+  .modal-price-box {
+    padding: 14px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .modal-price-val {
+    font-size: 1.45rem !important;
+  }
+
+  .modal-actions-row .btn-gold {
+    width: 100% !important;
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Price List Tables — Horizontal Scrolling Card */
+  .pricelist-table-card {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px !important;
+  }
+
+  .pricelist-table-header {
+    padding: 16px 18px !important;
+  }
+
+  .pricelist-table-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .official-price-table {
+    min-width: 500px !important;
+  }
+
+  .official-price-table th,
+  .official-price-table td {
+    padding: 12px 14px !important;
+  }
+
+  .price-product-title {
+    font-size: 0.95rem;
+  }
+
+  .price-product-flavour {
+    font-size: 0.8rem;
+  }
+
+  .price-val-tag {
+    font-size: 1.1rem !important;
   }
 
   /* Reviews & Promise */
@@ -5097,27 +5332,21 @@ html.lenis, html.lenis body {
   }
 
   .promise-card p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     line-height: 1.55;
   }
 
-  /* Tables */
-  .pricelist-table-header h3 {
-    font-size: 1.15rem;
-  }
-
-  .price-product-title {
-    font-size: 0.95rem;
-  }
-
-  .price-product-flavour {
-    font-size: 0.8rem;
+  /* Form inputs — minimum 16px font-size to prevent iOS Safari auto-zoom */
+  input, select, textarea,
+  .form-input, .form-select, .form-textarea,
+  .track-input {
+    font-size: 16px !important;
   }
 }
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: clamp(1.85rem, 7.8vw, 2.3rem);
+    font-size: clamp(1.8rem, 7.8vw, 2.2rem);
   }
 
   .hero-title .hero-tagline {
@@ -5128,23 +5357,28 @@ html.lenis, html.lenis body {
   }
 
   .section-title {
-    font-size: clamp(1.4rem, 5.8vw, 1.7rem);
+    font-size: clamp(1.35rem, 5.8vw, 1.65rem);
     line-height: 1.22;
   }
 
   .about-copy .section-title {
-    font-size: clamp(1.4rem, 5.6vw, 1.68rem);
+    font-size: clamp(1.35rem, 5.6vw, 1.62rem);
   }
 
   .card-title-row h4 {
-    font-size: 1.12rem;
+    font-size: 1.1rem;
   }
 
   .modal-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem !important;
   }
 
   .hero-section {
-    padding: 85px 16px 50px;
+    padding: 80px 14px 44px;
+  }
+
+  .base-chip {
+    font-size: 11.5px !important;
+    padding: 8px 6px !important;
   }
 }

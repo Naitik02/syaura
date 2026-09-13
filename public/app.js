@@ -163,12 +163,12 @@ const SYAURA_CATALOG = {
       '/products/bases/biscoff-baby-dark.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Assorted Flavours', 'White Chocolate', 'Milk Chocolate', 'Dark Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
       'Assorted Flavours': '/products/floating/biscoff-baby-floating.png',
-      'White Chocolate': '/products/bases/biscoff-baby-white.jpg',
       'Milk Chocolate': '/products/bases/biscoff-baby-milk.jpg',
-      'Dark Chocolate': '/products/bases/biscoff-baby-dark.jpg'
+      'Dark Chocolate': '/products/bases/biscoff-baby-dark.jpg',
+      'White Chocolate': '/products/bases/biscoff-baby-white.jpg'
     },
     defaultQty: '4 Pieces',
     defaultBase: 'Assorted Flavours',
@@ -245,7 +245,7 @@ const SYAURA_CATALOG = {
     category: 'The Artisan Bars',
     shape: 'Festive Modak · 21 Pcs',
     badge: 'Festive Exclusive',
-    description: 'Festive handcrafted chocolate modaks with whole almonds nestled inside, inspired by timeless sacred tradition and crafted with an artisanal royal touch.',
+    description: 'Festive handcrafted chocolate modaks with 1–2 whole almonds nestled inside, inspired by timeless sacred tradition and crafted with an artisanal royal touch.',
     mainImage: '/products/floating/modak-royale-studio.jpg',
     cutout: '/products/floating/modak-royale-floating.png',
     gallery: [
@@ -308,7 +308,7 @@ const SYAURA_CATALOG = {
     flavour: 'Mix Dry Fruit Heart',
     category: 'Sweet Hearts',
     shape: 'Diamond Faceted Heart · 12 & 18 Pcs',
-    badge: 'Pure Luxury',
+    badge: 'Royal Indulgence',
     description: 'A delicate faceted 3D diamond heart filled with premium mix dry fruits, wrapped in smooth, rich chocolate.',
     mainImage: '/products/floating/royal-heart-studio.jpg',
     cutout: '/products/floating/royal-heart-isolated.png',
@@ -340,7 +340,7 @@ const SYAURA_CATALOG = {
 
 // Global State
 let currentProduct = null;
-let currentBase = 'Milk Chocolate';
+let currentBase = 'Assorted Flavours';
 let currentQty = '4 Pieces';
 
 // --------------------------------------------------------------------------
@@ -574,6 +574,7 @@ window.openProductModal = function (productId) {
 
   if (modal) {
     modal.classList.add('open');
+    document.body.classList.add('modal-open');
     document.body.style.overflow = 'hidden';
   }
 };
@@ -665,6 +666,7 @@ window.closeProductModal = function () {
   const modal = document.getElementById('productModal');
   if (modal) {
     modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
   }
 };
@@ -1273,12 +1275,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize summary on page load
   window.updateInquirySummary();
 
-  // Mobile menu toggle
+  // Mobile menu toggle (strictly targeting #navLinks)
   const mobileToggle = document.getElementById('mobileToggle');
-  const mainNav = document.querySelector('.main-nav');
-  if (mobileToggle && mainNav) {
-    mobileToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('open');
+  const navLinks = document.getElementById('navLinks') || document.querySelector('.nav-links');
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle('open');
+      document.body.classList.toggle('menu-open', isOpen);
+      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Close mobile nav when clicking any link
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navLinks.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 

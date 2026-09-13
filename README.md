@@ -10,9 +10,10 @@ A luxury, editorial landing page website for **SYAURA Handcrafted Chocolates** (
 - **Refined Terminology**: Replaced the technical term "cavity" everywhere with **"4 & 6 Piece Gift Boxes"** and **"Bar Boxes"**.
 - **Accurate Menu Card Pricing**:
   - **4 & 6 Piece Gift Boxes**: Oreo Ball (₹139 / ₹169), Mix Dry Fruit (₹179 / ₹199), Oreo Classic (₹119 / ₹139), Roasted Almond (₹169 / ₹199), Lotus Biscoff (₹199 / ₹239), Diamond Hearts (₹149 / ₹189).
-  - **Bar Boxes**: Bar Box Mix Dry Fruit 11 Pcs (₹210), Bar Box Oreo 11 Pcs (₹169), Bar Box Modak Dry Fruits 21 Pcs (₹249).
-- **Direct Order & Inquiry Backend Flow**: Removed the e-commerce bag in favor of an order & custom gifting inquiry form connected to `POST /api/inquiries` with direct Instagram and Email concierge confirmation.
-- **Laptop View Optimized**: Scaled typography, generous line-heights, and crisp readability on laptop/desktop displays.
+  - **Bar Boxes**: Bar Box Mix Dry Fruit 11 Pcs (₹210), Bar Box Oreo 11 Pcs (₹169), Modak Royale (Chocolate Modak with Almonds 21 Pcs, ₹249).
+- **Direct Order & Inquiry Backend Flow**: Direct Instagram concierge ordering with prefilled message copying, plus custom gifting inquiry form connected to `POST /api/inquiries`.
+- **Mobile & Touch First Experience**: 100% hardened mobile responsive UI with clean header layout, smooth touch pill carousels, 2x2 flavour base chips, and safe-area Instagram ordering.
+- **Laptop & Desktop View Optimized**: Scaled typography, generous line-heights, and crisp readability on all displays.
 
 ## Running Locally
 
