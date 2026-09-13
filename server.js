@@ -1095,8 +1095,9 @@ const server = http.createServer(async (req, res) => {
     try {
       const payload = await readBody(req);
       const name = String(payload.name || '').trim();
-      const phone = String(payload.phone || '').trim();
       const email = String(payload.email || '').trim();
+      const instagram = String(payload.instagram || payload.insta || '').trim();
+      const phone = String(payload.phone || '').trim();
       const area = String(payload.area || '').trim();
       const occasion = String(payload.occasion || 'Bespoke Gifting').trim();
       
@@ -1124,8 +1125,8 @@ const server = http.createServer(async (req, res) => {
       const budget = String(payload.budget || '').trim();
       const notes = String(payload.notes || payload.specialRequests || '').trim();
 
-      if (!name || !phone) {
-        send(res, 400, { error: 'Name and Phone number are required to submit an inquiry.' });
+      if (!name || (!email && !instagram)) {
+        send(res, 400, { error: 'Name and Email or Instagram handle are required to submit an inquiry.' });
         return;
       }
 
@@ -1135,8 +1136,9 @@ const server = http.createServer(async (req, res) => {
         id: inquiryId,
         createdAt: new Date().toISOString(),
         name,
-        phone,
         email: email || undefined,
+        instagram: instagram || undefined,
+        phone: phone || undefined,
         area: area || 'Not specified',
         occasion,
         selection,
@@ -1152,31 +1154,12 @@ const server = http.createServer(async (req, res) => {
 
       saveInquiry(inquiry);
 
-      // Construct formatted luxury WhatsApp synthesis text
-      const waParts = [
-        `✦ *SYAURA BESPOKE INQUIRY* ✦\n`,
-        `*Reference:* ${inquiry.id}`,
-        `*Client:* ${name}`,
-        `*Phone:* ${phone}`,
-        area ? `*Location:* ${area}` : null,
-        `*Occasion:* ${occasion}`,
-        `*Selected Creations:* ${selection}`,
-        `*Chocolate Base:* ${base}`,
-        `*Estimated Quantity:* ${quantity}`,
-        targetDate ? `*Target Date:* ${targetDate}` : null,
-        packaging.length > 0 ? `*Packaging Add-ons:* ${packaging.join(' · ')}` : null,
-        budget ? `*Approx. Budget:* ${budget}` : null,
-        notes ? `*Special Requests / Notes:*\n"${notes}"` : null,
-        `\n_Handcrafted Luxury, Every Bite Wrapped in Elegance._`
-      ].filter(Boolean);
-
-      const waText = encodeURIComponent(waParts.join('\n'));
-
       send(res, 201, {
         success: true,
         inquiryId: inquiry.id,
-        message: `Thank you, ${name}! Your bespoke inquiry (${inquiry.id}) has been recorded. Our chocolatier will connect with you on WhatsApp shortly.`,
-        whatsappUrl: `https://wa.me/917559755928?text=${waText}`,
+        message: `Thank you, ${name}! Your bespoke inquiry (${inquiry.id}) has been recorded. Our concierge team will reach out via Instagram (@syaura.shop) or Email shortly.`,
+        instagramUrl: 'https://www.instagram.com/syaura.shop/',
+        emailUrl: `mailto:syaurashop@gmail.com?subject=Bespoke%20Inquiry%20Ref%20${inquiry.id}`,
         inquiry
       });
     } catch (error) {
@@ -1185,12 +1168,12 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // Public: Customer checks inquiry status by Reference ID or Phone Number
+  // Public: Customer checks inquiry status by Reference ID or Email / Instagram
   if (req.method === 'GET' && url.pathname === '/api/inquiries/track') {
     try {
       const q = String(url.searchParams.get('ref') || url.searchParams.get('query') || url.searchParams.get('id') || '').trim();
       if (!q) {
-        send(res, 400, { error: 'Please provide an Inquiry Reference ID or registered phone number.' });
+        send(res, 400, { error: 'Please provide an Inquiry Reference ID or registered Email / Instagram handle.' });
         return;
       }
 
@@ -1202,15 +1185,17 @@ const server = http.createServer(async (req, res) => {
       const cleanQ = q.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
       const match = inquiries.find((i) => {
         const cleanId = (i.id || '').replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+        const cleanEmail = (i.email || '').toLowerCase();
+        const cleanInsta = (i.instagram || '').replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
         const cleanPhone = (i.phone || '').replace(/[^0-9]/g, '');
-        return cleanId === cleanQ || cleanId.includes(cleanQ) || (cleanPhone && cleanPhone.endsWith(cleanQ));
+        return cleanId === cleanQ || cleanId.includes(cleanQ) || (cleanEmail && cleanEmail.includes(cleanQ)) || (cleanInsta && cleanInsta.includes(cleanQ)) || (cleanPhone && cleanPhone.endsWith(cleanQ));
       });
 
       if (!match) {
         send(res, 200, {
           success: true,
           found: false,
-          message: `No inquiry found matching "${q}". Please verify your reference ID or phone number.`
+          message: `No inquiry found matching "${q}". Please verify your reference ID or Email address.`
         });
         return;
       }

@@ -871,7 +871,7 @@ const inquiryState = {
   city: 'Kalyan',
   packaging: ['Handwritten Note Card', 'Golden Satin Ribbon'],
   clientName: '',
-  clientPhone: '',
+  clientInsta: '',
   clientEmail: '',
   budget: '',
   notes: ''
@@ -952,7 +952,7 @@ window.updateInquirySummary = function () {
   const dateInput = document.getElementById('inquiryEventDate');
   const citySelect = document.getElementById('inquiryCitySelect');
   const nameInput = document.getElementById('inquiryClientName');
-  const phoneInput = document.getElementById('inquiryClientPhone');
+  const instaInput = document.getElementById('inquiryClientInsta');
   const emailInput = document.getElementById('inquiryClientEmail');
   const budgetInput = document.getElementById('inquiryBudgetGuide');
   const notesInput = document.getElementById('inquirySpecialNotes');
@@ -960,7 +960,7 @@ window.updateInquirySummary = function () {
   if (dateInput) inquiryState.targetDate = dateInput.value;
   if (citySelect) inquiryState.city = citySelect.value;
   if (nameInput) inquiryState.clientName = nameInput.value.trim();
-  if (phoneInput) inquiryState.clientPhone = phoneInput.value.trim();
+  if (instaInput) inquiryState.clientInsta = instaInput.value.trim();
   if (emailInput) inquiryState.clientEmail = emailInput.value.trim();
   if (budgetInput) inquiryState.budget = budgetInput.value.trim();
   if (notesInput) inquiryState.notes = notesInput.value.trim();
@@ -1008,29 +1008,6 @@ window.updateInquirySummary = function () {
   }
 };
 
-window.sendQuickWhatsAppInquiry = function () {
-  window.updateInquirySummary();
-  const name = inquiryState.clientName || 'Patron';
-  const waParts = [
-    `✦ *SYAURA LUXURY GIFTING INQUIRY* ✦\n`,
-    `*Client:* ${name}`,
-    inquiryState.clientPhone ? `*Phone:* ${inquiryState.clientPhone}` : null,
-    `*Occasion:* ${inquiryState.occasion}`,
-    `*Creations:* ${inquiryState.flavours.join(', ')}`,
-    `*Chocolate Base:* ${inquiryState.base}`,
-    `*Estimated Volume:* ${inquiryState.quantity}`,
-    inquiryState.targetDate ? `*Target Date:* ${inquiryState.targetDate}` : null,
-    `*City:* ${inquiryState.city}`,
-    inquiryState.packaging.length ? `*Packaging:* ${inquiryState.packaging.join(' · ')}` : null,
-    inquiryState.budget ? `*Budget:* ${inquiryState.budget}` : null,
-    inquiryState.notes ? `*Notes:* "${inquiryState.notes}"` : null,
-    `\n_Handcrafted Luxury, Every Bite Wrapped in Elegance._`
-  ].filter(Boolean);
-
-  const url = `https://wa.me/917559755928?text=${encodeURIComponent(waParts.join('\n'))}`;
-  window.open(url, '_blank', 'noopener');
-};
-
 window.handleInquirySubmit = async function (e) {
   e.preventDefault();
   window.updateInquirySummary();
@@ -1043,9 +1020,9 @@ window.handleInquirySubmit = async function (e) {
     statusMsg.className = 'inquiry-status-msg';
   }
 
-  if (!inquiryState.clientName || !inquiryState.clientPhone) {
+  if (!inquiryState.clientName || (!inquiryState.clientEmail && !inquiryState.clientInsta)) {
     if (statusMsg) {
-      statusMsg.textContent = 'Please enter your Full Name and WhatsApp Number.';
+      statusMsg.textContent = 'Please enter your Full Name, along with your Email Address or Instagram handle.';
       statusMsg.classList.add('error');
       statusMsg.style.display = 'block';
     }
@@ -1061,8 +1038,8 @@ window.handleInquirySubmit = async function (e) {
   try {
     const payload = {
       name: inquiryState.clientName,
-      phone: inquiryState.clientPhone,
       email: inquiryState.clientEmail,
+      instagram: inquiryState.clientInsta,
       area: inquiryState.city,
       occasion: inquiryState.occasion,
       flavours: inquiryState.flavours,
@@ -1090,23 +1067,23 @@ window.handleInquirySubmit = async function (e) {
     const modalRef = document.getElementById('inquiryModalRef');
     const modalOccasion = document.getElementById('inquiryModalOccasion');
     const modalQty = document.getElementById('inquiryModalQty');
-    const modalWaBtn = document.getElementById('inquiryModalWaBtn');
     const modalMessage = document.getElementById('inquiryModalMessage');
+    const modalEmailBtn = document.getElementById('inquiryModalEmailBtn');
 
     if (modalRef) modalRef.textContent = data.inquiryId;
     if (modalOccasion) modalOccasion.textContent = inquiryState.occasion;
     if (modalQty) modalQty.textContent = inquiryState.quantity;
     if (modalMessage) {
-      modalMessage.textContent = `Thank you, ${inquiryState.clientName}! Your bespoke inquiry has been registered. Reference: ${data.inquiryId}.`;
+      modalMessage.textContent = `Thank you, ${inquiryState.clientName}! Your bespoke inquiry has been registered. Reference: ${data.inquiryId}. Connect with us on Instagram (@syaura.shop) or via Email.`;
     }
-    if (modalWaBtn && data.whatsappUrl) {
-      modalWaBtn.href = data.whatsappUrl;
+    if (modalEmailBtn) {
+      modalEmailBtn.href = `mailto:syaurashop@gmail.com?subject=Bespoke%20Inquiry%20Ref%20${data.inquiryId}&body=Hello%20SYAURA%20Concierge!%20My%20Inquiry%20Reference%20is%20${data.inquiryId}...`;
     }
 
     window.openInquiryModal();
   } catch (err) {
     if (statusMsg) {
-      statusMsg.textContent = err.message || 'Something went wrong. Please try again or WhatsApp us directly.';
+      statusMsg.textContent = err.message || 'Something went wrong. Please connect via Instagram (@syaura.shop) or Email (syaurashop@gmail.com).';
       statusMsg.classList.add('error');
       statusMsg.style.display = 'block';
     }
@@ -1144,7 +1121,7 @@ window.trackInquiryStatus = async function () {
     resultWrap.style.display = 'block';
     resultWrap.innerHTML = `
       <div style="color: #ef9a9a; text-align: center; font-size: 14px; padding: 12px;">
-        Please enter an Inquiry Reference ID or phone number.
+        Please enter an Inquiry Reference ID or your registered Email/Instagram handle.
       </div>`;
     return;
   }
@@ -1165,11 +1142,16 @@ window.trackInquiryStatus = async function () {
           <div style="font-size: 32px; margin-bottom: 8px;">🔍</div>
           <h4 style="color: #ef9a9a; margin-bottom: 6px; font-size: 16px;">No Inquiry Record Found</h4>
           <p style="color: var(--text-muted); font-size: 13.5px; margin-bottom: 14px;">
-            ${data.message || 'We could not find an active inquiry matching this search. Please check your reference ID or phone number.'}
+            ${data.message || 'We could not find an active inquiry matching this search. Please check your reference ID or Email.'}
           </p>
-          <a href="https://wa.me/917559755928?text=Hello%20SYAURA!%20I%20am%20checking%20status%20for%20inquiry:%20${encodeURIComponent(q)}" target="_blank" rel="noopener" class="btn-outline" style="display: inline-flex; padding: 9px 20px; font-size: 13px;">
-            Ask on WhatsApp ↗
-          </a>
+          <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <a href="https://www.instagram.com/syaura.shop/" target="_blank" rel="noopener" class="btn-gold" style="display: inline-flex; padding: 9px 20px; font-size: 13px; text-decoration: none;">
+              Message on Instagram (@syaura.shop) ↗
+            </a>
+            <a href="mailto:syaurashop@gmail.com?subject=Inquiry%20Status%20Query:%20${encodeURIComponent(q)}" class="btn-outline" style="display: inline-flex; padding: 9px 20px; font-size: 13px; text-decoration: none;">
+              Email Us ✉
+            </a>
+          </div>
         </div>`;
       return;
     }
@@ -1180,7 +1162,7 @@ window.trackInquiryStatus = async function () {
       : 'Recent';
 
     let statusLabel = '✦ Under Concierge Review';
-    let statusDesc = 'Your request has been received. Our chocolatier will WhatsApp you shortly with custom box layouts and exact pricing.';
+    let statusDesc = 'Your request has been received. Our concierge team will reach out via Instagram DM or Email with custom box layouts and exact pricing.';
 
     if ((inq.status || '').toLowerCase().includes('confirm')) {
       statusLabel = '✓ Confirmed & Production Scheduled';
@@ -1190,7 +1172,9 @@ window.trackInquiryStatus = async function () {
       statusDesc = 'Your luxury chocolates have been crafted, packaged, and dispatched.';
     }
 
-    const waText = encodeURIComponent(`Hello SYAURA! Regarding my inquiry reference ${inq.id} (${inq.occasion})...`);
+    const emailSubject = encodeURIComponent(`SYAURA Inquiry Status Check — ${inq.id}`);
+    const emailBody = encodeURIComponent(`Hello SYAURA Concierge!\n\nI am inquiring about my inquiry reference ${inq.id} (${inq.occasion}).\n\nClient Name: ${inq.name || ''}\nSelected: ${inq.selection || ''}`);
+    const mailtoUrl = `mailto:syaurashop@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 
     resultWrap.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; border-bottom: 1px solid rgba(212,175,55,0.25); padding-bottom: 14px;">
@@ -1233,15 +1217,18 @@ window.trackInquiryStatus = async function () {
         <div style="color: #fff; font-size: 13px;">${inq.selection}</div>
       </div>
 
-      <div style="display: flex; justify-content: flex-end; gap: 10px;">
-        <a href="https://wa.me/917559755928?text=${waText}" target="_blank" rel="noopener" class="btn-gold" style="padding: 9px 20px; font-size: 13px;">
-          <span>Chat on WhatsApp with Ref ↗</span>
+      <div style="display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap;">
+        <a href="https://www.instagram.com/syaura.shop/" target="_blank" rel="noopener" class="btn-gold" style="padding: 9px 20px; font-size: 13px; text-decoration: none;">
+          <span>Message on Instagram (@syaura.shop) ↗</span>
+        </a>
+        <a href="${mailtoUrl}" class="btn-outline" style="padding: 9px 20px; font-size: 13px; text-decoration: none;">
+          <span>Email Concierge ✉</span>
         </a>
       </div>`;
   } catch (err) {
     resultWrap.innerHTML = `
       <div style="color: #ef9a9a; text-align: center; font-size: 13.5px; padding: 12px;">
-        Could not connect to tracking server. Please check your internet connection or WhatsApp us directly.
+        Could not connect to tracking server. Please reach out via Instagram (@syaura.shop) or Email (syaurashop@gmail.com).
       </div>`;
   }
 };

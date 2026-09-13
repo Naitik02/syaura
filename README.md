@@ -11,7 +11,7 @@ A luxury, editorial landing page website for **SYAURA Handcrafted Chocolates** (
 - **Accurate Menu Card Pricing**:
   - **4 & 6 Piece Gift Boxes**: Oreo Ball (₹139 / ₹169), Mix Dry Fruit (₹179 / ₹199), Oreo Classic (₹119 / ₹139), Roasted Almond (₹169 / ₹199), Lotus Biscoff (₹199 / ₹239), Diamond Hearts (₹149 / ₹189).
   - **Bar Boxes**: Bar Box Mix Dry Fruit 11 Pcs (₹210), Bar Box Oreo 11 Pcs (₹169), Bar Box Modak Dry Fruits 21 Pcs (₹249).
-- **Direct Order & Inquiry Backend Flow**: Removed the e-commerce bag in favor of an order & custom gifting inquiry form connected to `POST /api/inquiries` with one-click WhatsApp pre-filled confirmation.
+- **Direct Order & Inquiry Backend Flow**: Removed the e-commerce bag in favor of an order & custom gifting inquiry form connected to `POST /api/inquiries` with direct Instagram and Email concierge confirmation.
 - **Laptop View Optimized**: Scaled typography, generous line-heights, and crisp readability on laptop/desktop displays.
 
 ## Running Locally
@@ -25,5 +25,6 @@ Open `http://localhost:3000` in your web browser.
 ## Backend Endpoints
 
 - `GET /api/products` — Product catalog with descriptions, pricing, and image paths
-- `POST /api/inquiries` — Records customer order/gifting inquiries into `data/inquiries.json` and generates pre-filled WhatsApp confirmation links
+- `POST /api/inquiries` — Records customer order/gifting inquiries into `data/inquiries.json` with direct Instagram & Email concierge integration
+- `GET /api/inquiries/track` — Status inquiry tracking lookup by reference ID or Email
 - `GET /api/health` — Server status and timestamp

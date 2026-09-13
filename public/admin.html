@@ -1167,14 +1167,6 @@
             ? new Date(order.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
             : 'N/A';
 
-          const cleanPhone = (order.phone || '').replace(/[^0-9]/g, '');
-          const waText = encodeURIComponent(
-            `Hello ${order.name}! Greetings from SYAURA Handcrafted Chocolates.\n\n` +
-            `Your Order *${order.id}* has been verified & confirmed for delivery on *${order.deliveryDate}* to *${order.city}*!\n\n` +
-            `Total: ₹${order.totalAmount}\nTrack here: https://syaura.com/track?id=${order.id}`
-          );
-          const waUrl = `https://wa.me/${cleanPhone.startsWith('91') ? cleanPhone : '91' + cleanPhone}?text=${waText}`;
-
           const itemsHtml = (order.items || []).map(it => `
             <span class="item-badge">${escapeHtml(it.name)} (${it.quantity || it.qty || '1'}) [${it.base || 'Assorted'}]</span>
           `).join('');
@@ -1232,9 +1224,8 @@
               </td>
               <td>
                 <div style="display: flex; gap: 8px; align-items: center;">
-                  <a href="${waUrl}" target="_blank" rel="noopener" class="btn-wa" title="Send WhatsApp Update">
-                    <span>WA</span>
-                  </a>
+                  <a href="https://www.instagram.com/syaura.shop/" target="_blank" rel="noopener" class="btn-wa" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); text-decoration: none;" title="Instagram">IG</a>
+                  <a href="mailto:syaurashop@gmail.com?subject=SYAURA%20Order%20${order.id}" class="btn-wa" style="background: rgba(212,175,55,0.25); color: var(--gold-light); text-decoration: none;" title="Email">✉</a>
                   <button class="btn-del" onclick="deleteOrder('${order.id}')" title="Delete Order">✕</button>
                 </div>
               </td>
@@ -1273,11 +1264,9 @@
             ? new Date(item.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
             : 'N/A';
 
-          const cleanPhone = (item.phone || '').replace(/[^0-9]/g, '');
-          const waText = encodeURIComponent(
-            `Hello ${item.name}! Greetings from SYAURA Handcrafted Chocolates regarding your inquiry ${item.id} (${item.occasion || 'Custom Gifting'}).\n\nHow can we assist you with your chocolate curation?`
-          );
-          const waUrl = `https://wa.me/${cleanPhone.startsWith('91') ? cleanPhone : '91' + cleanPhone}?text=${waText}`;
+          const contactEmail = item.email ? `mailto:${encodeURIComponent(item.email)}?subject=SYAURA%20Inquiry%20Ref%20${item.id}` : 'mailto:syaurashop@gmail.com';
+          const cleanInsta = (item.instagram || '').replace('@', '').trim();
+          const instaUrl = cleanInsta ? `https://www.instagram.com/${cleanInsta}/` : 'https://www.instagram.com/syaura.shop/';
 
           const occasionBadge = item.occasion
             ? `<span class="item-badge" style="background: rgba(212, 175, 55, 0.18); border-color: rgba(212, 175, 55, 0.4); color: var(--gold-light);">${escapeHtml(item.occasion)}</span>`
@@ -1295,8 +1284,8 @@
               <td><span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">${dateStr}</span></td>
               <td>
                 <span class="customer-name">${escapeHtml(item.name)}</span>
-                <a href="tel:${escapeHtml(item.phone)}" class="customer-phone">${escapeHtml(item.phone)}</a>
-                ${item.email ? `<br /><small style="color: var(--text-muted); font-size: 11px;">${escapeHtml(item.email)}</small>` : ''}
+                ${item.instagram ? `<a href="${instaUrl}" target="_blank" rel="noopener" style="color: var(--gold-light); font-size: 11.5px; display: block;">📸 ${escapeHtml(item.instagram)}</a>` : ''}
+                ${item.email ? `<a href="${contactEmail}" style="color: var(--text-muted); font-size: 11px; display: block;">✉ ${escapeHtml(item.email)}</a>` : ''}
               </td>
               <td>${escapeHtml(item.area || '—')}</td>
               <td>
@@ -1320,7 +1309,8 @@
               </td>
               <td>
                 <div style="display: flex; gap: 8px; align-items: center;">
-                  <a href="${waUrl}" target="_blank" rel="noopener" class="btn-wa" title="WhatsApp Customer">WA</a>
+                  <a href="${instaUrl}" target="_blank" rel="noopener" class="btn-wa" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); text-decoration: none;" title="Instagram DM">IG</a>
+                  ${item.email ? `<a href="${contactEmail}" class="btn-wa" style="background: rgba(212,175,55,0.25); color: var(--gold-light); text-decoration: none;" title="Send Email">✉</a>` : ''}
                   <button class="btn-del" onclick="deleteInquiry('${item.id}')" title="Delete Inquiry">✕</button>
                 </div>
               </td>

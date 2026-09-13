@@ -1406,7 +1406,7 @@
                     <span class="panel-step-badge">06</span>
                     <div>
                       <h3 class="panel-title">Your Contact &amp; Special Instructions</h3>
-                      <p class="panel-hint">We will connect on WhatsApp with exact pricing, box layouts, and photos</p>
+                      <p class="panel-hint">We will connect via Instagram DM or Email with custom proposals, box layouts, and photos</p>
                     </div>
                   </div>
 
@@ -1416,16 +1416,17 @@
                       <input type="text" id="inquiryClientName" class="form-input" placeholder="e.g. Vikram Singhania" required maxlength="60" oninput="updateInquirySummary()" />
                     </div>
                     <div class="form-group">
-                      <label class="form-label" for="inquiryClientPhone">WhatsApp Number *</label>
-                      <input type="tel" id="inquiryClientPhone" class="form-input" placeholder="e.g. 98200 12345" required maxlength="15" oninput="updateInquirySummary()" />
-                      <small class="form-field-hint">✦ We send box photos &amp; quotes directly to this WhatsApp</small>
+                      <label class="form-label" for="inquiryClientInsta">Instagram Handle *</label>
+                      <input type="text" id="inquiryClientInsta" class="form-input" placeholder="e.g. @vikram.singhania" required maxlength="40" oninput="updateInquirySummary()" />
+                      <small class="form-field-hint">✦ We share box previews via Instagram DM (@syaura.shop)</small>
                     </div>
                   </div>
 
                   <div class="form-row-2col" style="margin-top: 14px;">
                     <div class="form-group">
-                      <label class="form-label" for="inquiryClientEmail">Email Address (Optional)</label>
-                      <input type="email" id="inquiryClientEmail" class="form-input" placeholder="e.g. vikram@example.com" />
+                      <label class="form-label" for="inquiryClientEmail">Email Address *</label>
+                      <input type="email" id="inquiryClientEmail" class="form-input" placeholder="e.g. vikram@example.com" required oninput="updateInquirySummary()" />
+                      <small class="form-field-hint">✦ Official bespoke quotes sent to your inbox</small>
                     </div>
                     <div class="form-group">
                       <label class="form-label" for="inquiryBudgetGuide">Approx. Budget Guide (Optional)</label>
@@ -1504,7 +1505,7 @@
                   <!-- Fast Turnaround Notice -->
                   <div class="summary-turnaround-badge">
                     <span class="pulse-dot"></span>
-                    <span>Concierge WhatsApp response within 2 business hours</span>
+                    <span>Concierge response via Instagram DM or Email within 2 hours</span>
                   </div>
 
                   <!-- Actions -->
@@ -1512,14 +1513,18 @@
                     <button type="submit" id="submitInquiryBtn" class="btn-gold inquiry-submit-btn">
                       <span>Submit Bespoke Inquiry ✦</span>
                     </button>
-                    <button type="button" class="btn-outline inquiry-quick-wa-btn" onclick="sendQuickWhatsAppInquiry()">
-                      <span>Direct WhatsApp Inquiry ↗</span>
-                    </button>
+                    <a href="https://www.instagram.com/syaura.shop/" target="_blank" rel="noopener" class="btn-outline inquiry-quick-action-btn" style="text-decoration: none; text-align: center;">
+                      <span>Message on Instagram (@syaura.shop) ↗</span>
+                    </a>
+                    <a href="mailto:syaurashop@gmail.com" class="btn-outline inquiry-quick-action-btn" style="text-decoration: none; text-align: center;">
+                      <span>Email Concierge (syaurashop@gmail.com) ✉</span>
+                    </a>
                   </div>
 
                   <div class="summary-concierge-footer">
-                    <span>Direct Concierge Helpline:</span>
-                    <a href="tel:+917559755928" class="concierge-link">+91 75597 55928</a>
+                    <span>Direct Concierge:</span>
+                    <a href="https://www.instagram.com/syaura.shop/" target="_blank" rel="noopener" class="concierge-link">Instagram (@syaura.shop) ↗</a> · 
+                    <a href="mailto:syaurashop@gmail.com" class="concierge-link">syaurashop@gmail.com</a>
                   </div>
 
                   <!-- Inline Error / Status Display -->
@@ -1536,13 +1541,16 @@
                 <div class="track-icon">🔍</div>
                 <h3 class="track-title">Track Your Custom Inquiry Status</h3>
                 <p class="track-sub">
-                  Enter your Inquiry Reference ID (e.g. <code>SYAURA-INQ-A4C87A</code>) or registered WhatsApp phone number
+                  Enter your Inquiry Reference ID (e.g. <code>SYAURA-INQ-A4C87A</code>) or registered Email Address / Instagram handle
                 </p>
               </div>
 
               <div class="track-search-bar">
-                <input type="text" id="trackQueryInput" class="track-input" placeholder="e.g. SYAURA-INQ-A4C87A or 9820012345" />
+                <input type="text" id="trackQueryInput" class="track-input" placeholder="e.g. SYAURA-INQ-A4C87A, yourname@email.com or @handle" />
                 <button type="button" class="btn-gold" onclick="trackInquiryStatus()">
+                  <span>Check Status ✦</span>
+                </button>
+              </div>
                   <span>Check Status ✦</span>
                 </button>
               </div>
@@ -1859,12 +1867,15 @@
         </div>
 
         <p style="font-size: 13px; color: var(--sage-light); margin-bottom: 22px;">
-          Connect directly on WhatsApp to finalize flavour compositions, custom box artwork, and complimentary sampling.
+          Connect directly on Instagram (@syaura.shop) or Email to finalize flavour compositions, custom box artwork, and complimentary sampling.
         </p>
 
         <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-          <a id="inquiryModalWaBtn" href="#" target="_blank" rel="noopener" class="btn-gold" style="padding: 13px 28px; font-size: 14.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-            <span>Open WhatsApp Conversation ↗</span>
+          <a href="https://www.instagram.com/syaura.shop/" target="_blank" rel="noopener" class="btn-gold" style="padding: 13px 28px; font-size: 14.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+            <span>Message on Instagram (@syaura.shop) ↗</span>
+          </a>
+          <a href="mailto:syaurashop@gmail.com" class="btn-outline" style="padding: 13px 24px; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+            <span>Email Concierge ✉</span>
           </a>
           <button type="button" onclick="closeInquiryModal()" class="btn-outline" style="padding: 13px 24px; font-size: 14px;">
             Close &amp; Continue
