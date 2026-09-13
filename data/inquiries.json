@@ -39,10 +39,46 @@
     "phone": "+91 99887 76655",
     "area": "Thane West",
     "selection": "biscoff-baby",
-    "base": "Ivory White",
+    "base": "White Chocolate",
     "quantity": "6 Pieces",
     "price": "239",
     "notes": "Please send fresh batch in green 6-cavity box.",
+    "status": "Pending Contact"
+  },
+  {
+    "id": "SYAURA-INQ-A4C87A",
+    "createdAt": "2026-09-13T04:54:17.242Z",
+    "name": "Rohan Mehra",
+    "phone": "9820198201",
+    "area": "Not specified",
+    "occasion": "Wedding & Favours",
+    "selection": "Cookie Crumble, Chocolate Modak",
+    "base": "Assorted Flavours",
+    "quantity": "16–30 Boxes",
+    "packaging": [
+      "Golden Satin Ribbon",
+      "Handwritten Card"
+    ],
+    "targetDate": "2026-10-15",
+    "notes": "Deliver to Kalyan banquet hall.",
+    "status": "Pending Contact"
+  },
+  {
+    "id": "SYAURA-INQ-628293",
+    "createdAt": "2026-09-13T05:08:24.171Z",
+    "name": "Kavita Kapoor",
+    "phone": "9820555888",
+    "email": "kavita@luxuryevents.com",
+    "area": "Kalyan",
+    "occasion": "Corporate & Executive",
+    "selection": "Cookie Crumble (Oreo Ball), Royal Crunch (Mix Dry Fruit), Chocolate Modak (with Almonds inside)",
+    "base": "Dark Chocolate",
+    "quantity": "16–30 Boxes",
+    "packaging": [
+      "Handwritten Note Card",
+      "Golden Satin Ribbon"
+    ],
+    "notes": "Please arrange custom golden foil logo tags for Diwali executive gifts.",
     "status": "Pending Contact"
   }
 ]

@@ -27,14 +27,15 @@ const SYAURA_CATALOG = {
       '/products/bases/cookie-crumble-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/cookie-crumble-floating.png',
       'Milk Chocolate': '/products/bases/cookie-crumble-milk.jpg',
       'Dark Chocolate': '/products/bases/cookie-crumble-dark.jpg',
       'White Chocolate': '/products/bases/cookie-crumble-white.jpg'
     },
     defaultQty: '4 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 139,
       '6 Pieces': 169
@@ -44,11 +45,11 @@ const SYAURA_CATALOG = {
   'royal-crunch': {
     id: 'royal-crunch',
     name: 'Royal Crunch',
-    flavour: 'Mixed Dry Fruit Square',
+    flavour: 'Mix Dry Fruit Square',
     category: 'Choco Bites',
     shape: 'Square Pcs · 4 & 6 per box',
     badge: 'Royal Selection',
-    description: 'A luxurious blend of assorted roasted dry fruits encased in rich chocolate, crafted into an elegant square bite bringing together royal richness and satisfying crunch in every bite.',
+    description: 'A luxurious blend of assorted roasted mix dry fruits encased in rich chocolate, crafted into an elegant square bite bringing together royal richness and satisfying crunch in every bite.',
     mainImage: '/products/floating/royal-crunch-studio.jpg',
     cutout: '/products/floating/royal-crunch-floating.png',
     gallery: [
@@ -60,14 +61,15 @@ const SYAURA_CATALOG = {
       '/products/bases/royal-crunch-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/royal-crunch-floating.png',
       'Milk Chocolate': '/products/bases/royal-crunch-milk.jpg',
       'Dark Chocolate': '/products/bases/royal-crunch-dark.jpg',
       'White Chocolate': '/products/bases/royal-crunch-white.jpg'
     },
     defaultQty: '4 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 179,
       '6 Pieces': 199
@@ -93,14 +95,15 @@ const SYAURA_CATALOG = {
       '/products/bases/cookie-crave-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/cookie-crave-floating.png',
       'Milk Chocolate': '/products/bases/cookie-crave-milk.jpg',
       'Dark Chocolate': '/products/bases/cookie-crave-dark.jpg',
       'White Chocolate': '/products/bases/cookie-crave-white.jpg'
     },
     defaultQty: '4 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 119,
       '6 Pieces': 139
@@ -126,14 +129,15 @@ const SYAURA_CATALOG = {
       '/products/bases/almond-crush-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/almond-crush-floating.png',
       'Milk Chocolate': '/products/bases/almond-crush-milk.jpg',
       'Dark Chocolate': '/products/bases/almond-crush-dark.jpg',
       'White Chocolate': '/products/bases/almond-crush-white.jpg'
     },
     defaultQty: '4 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 169,
       '6 Pieces': 199
@@ -159,14 +163,15 @@ const SYAURA_CATALOG = {
       '/products/bases/biscoff-baby-dark.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['White Chocolate', 'Milk Chocolate', 'Dark Chocolate'],
+    availableBases: ['Assorted Flavours', 'White Chocolate', 'Milk Chocolate', 'Dark Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/biscoff-baby-floating.png',
       'White Chocolate': '/products/bases/biscoff-baby-white.jpg',
       'Milk Chocolate': '/products/bases/biscoff-baby-milk.jpg',
       'Dark Chocolate': '/products/bases/biscoff-baby-dark.jpg'
     },
     defaultQty: '4 Pieces',
-    defaultBase: 'White Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 199,
       '6 Pieces': 239
@@ -176,11 +181,11 @@ const SYAURA_CATALOG = {
   'nut-noble': {
     id: 'nut-noble',
     name: 'Nut & Noble',
-    flavour: 'Mixed Dry Fruit Bar',
+    flavour: 'Mix Dry Fruit Bar',
     category: 'The Artisan Bars',
     shape: 'Artisan Bar · 11 Pcs Box',
     badge: 'Gifting Special',
-    description: 'A generous blend of premium dry fruits wrapped in rich chocolate. Nut & Noble celebrates the naturally luxurious character of every nut.',
+    description: 'A generous blend of premium mix dry fruits wrapped in rich chocolate. Nut & Noble celebrates the naturally luxurious character of handcrafted chocolates.',
     mainImage: '/products/floating/nut-noble-studio.jpg',
     cutout: '/products/floating/nut-noble-floating.png',
     gallery: [
@@ -188,10 +193,16 @@ const SYAURA_CATALOG = {
       '/products/floating/nut-noble-macro.jpg',
       '/products/floating/nut-noble-floating.png'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Assorted Flavours': '/products/floating/nut-noble-floating.png',
+      'Milk Chocolate': '/products/floating/nut-noble-studio.jpg',
+      'Dark Chocolate': '/products/floating/nut-noble-studio.jpg',
+      'White Chocolate': '/products/floating/nut-noble-studio.jpg'
+    },
     defaultQty: '11 Pieces',
-    defaultBase: 'Mixed Dry Fruit Bar',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '11 Pieces': 210
     },
@@ -212,10 +223,16 @@ const SYAURA_CATALOG = {
       '/products/floating/cookie-crunch-bar-macro.jpg',
       '/products/floating/cookie-crunch-bar-floating.png'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Assorted Flavours': '/products/floating/cookie-crunch-bar-floating.png',
+      'Milk Chocolate': '/products/floating/cookie-crunch-bar-studio.jpg',
+      'Dark Chocolate': '/products/floating/cookie-crunch-bar-studio.jpg',
+      'White Chocolate': '/products/floating/cookie-crunch-bar-studio.jpg'
+    },
     defaultQty: '11 Pieces',
-    defaultBase: 'Oreo Bar',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '11 Pieces': 169
     },
@@ -224,11 +241,11 @@ const SYAURA_CATALOG = {
   'modak-royale': {
     id: 'modak-royale',
     name: 'Modak Royale',
-    flavour: 'Dry Fruit Modak Bar',
+    flavour: 'Chocolate Modak',
     category: 'The Artisan Bars',
-    shape: 'Festive Sacred Mold · 21 Pcs',
+    shape: 'Festive Modak · 21 Pcs',
     badge: 'Festive Exclusive',
-    description: 'Traditional sacred shape meets modern artisan chocolate elegance. Prepared specially for divine celebrations, festive hampers, and royal gifting.',
+    description: 'Festive handcrafted chocolate modaks with whole almonds nestled inside, inspired by timeless sacred tradition and crafted with an artisanal royal touch.',
     mainImage: '/products/floating/modak-royale-studio.jpg',
     cutout: '/products/floating/modak-royale-floating.png',
     gallery: [
@@ -236,10 +253,16 @@ const SYAURA_CATALOG = {
       '/products/floating/modak-royale-macro.jpg',
       '/products/floating/modak-royale-floating.png'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Assorted Flavours': '/products/floating/modak-royale-floating.png',
+      'Milk Chocolate': '/products/floating/modak-royale-studio.jpg',
+      'Dark Chocolate': '/products/floating/modak-royale-studio.jpg',
+      'White Chocolate': '/products/floating/modak-royale-studio.jpg'
+    },
     defaultQty: '21 Pieces',
-    defaultBase: 'Dry Fruit Modak Bar',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '21 Pieces': 249
     },
@@ -264,14 +287,15 @@ const SYAURA_CATALOG = {
       '/products/bases/cookie-heart-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/cookie-heart-floating.png',
       'Milk Chocolate': '/products/bases/cookie-heart-milk.jpg',
       'Dark Chocolate': '/products/bases/cookie-heart-dark.jpg',
       'White Chocolate': '/products/bases/cookie-heart-white.jpg'
     },
     defaultQty: '12 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '12 Pieces': 499,
       '18 Pieces': 699
@@ -281,11 +305,11 @@ const SYAURA_CATALOG = {
   'royal-heart': {
     id: 'royal-heart',
     name: 'Royal Heart',
-    flavour: 'Mixed Dry Fruit Heart',
+    flavour: 'Mix Dry Fruit Heart',
     category: 'Sweet Hearts',
     shape: 'Diamond Faceted Heart · 12 & 18 Pcs',
     badge: 'Pure Luxury',
-    description: 'A delicate faceted 3D diamond heart filled with royal dry fruits, topped with roasted pistachios, golden almond slivers, and rich caramel ribbons wrapped in smooth chocolate.',
+    description: 'A delicate faceted 3D diamond heart filled with premium mix dry fruits, wrapped in smooth, rich chocolate.',
     mainImage: '/products/floating/royal-heart-studio.jpg',
     cutout: '/products/floating/royal-heart-isolated.png',
     gallery: [
@@ -297,14 +321,15 @@ const SYAURA_CATALOG = {
       '/products/bases/royal-heart-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/royal-heart-isolated.png',
       'Milk Chocolate': '/products/bases/royal-heart-milk.jpg',
       'Dark Chocolate': '/products/bases/royal-heart-dark.jpg',
       'White Chocolate': '/products/bases/royal-heart-white.jpg'
     },
     defaultQty: '12 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '12 Pieces': 449,
       '18 Pieces': 649
@@ -368,7 +393,8 @@ window.buyCurrentModalOnInstagram = function () {
     return;
   }
   const price = currentProduct.prices[currentQty] || Object.values(currentProduct.prices)[0];
-  const customMsg = `Hey i am intrested to buy some chocolates ! Specifically: ${currentProduct.name} (${currentProduct.flavour}) - ${currentQty}, Base: ${currentBase} (₹${price}).`;
+  const freeDeliveryNote = price >= 999 ? ' (Free Delivery applied!)' : '';
+  const customMsg = `Hey i am intrested to buy some chocolates ! Specifically: ${currentProduct.name} (${currentProduct.flavour}) - ${currentQty}, Base: ${currentBase} (₹${price})${freeDeliveryNote}.`;
   window.buyOnInstagram(customMsg);
 };
 
@@ -510,25 +536,30 @@ window.openProductModal = function (productId) {
     });
   }
 
-  // Setup Base Chips: Hide completely for single-flavor products (Nut & Noble, Modak Royale, etc.)
+  // Setup Base Chips: Dynamically render all available base chips
   const modalBaseGroup = document.getElementById('modalBaseGroup');
   if (modalBaseGroup) {
     if (hasBases) {
       modalBaseGroup.style.display = 'block';
       if (modalBaseChips) {
-        modalBaseChips.querySelectorAll('.base-chip').forEach((chip) => {
-          const baseName = chip.getAttribute('data-base');
-          if (prod.availableBases.includes(baseName)) {
-            chip.style.display = 'inline-flex';
-            chip.classList.toggle('active', baseName === currentBase);
-          } else {
-            chip.style.display = 'none';
-          }
-          const newChip = chip.cloneNode(true);
-          chip.parentNode.replaceChild(newChip, chip);
-          newChip.addEventListener('click', () => {
+        modalBaseChips.innerHTML = '';
+        const baseIcons = {
+          'Assorted Flavours': '✨',
+          'Milk Chocolate': '🥛',
+          'Dark Chocolate': '🍫',
+          'White Chocolate': '🤍'
+        };
+        prod.availableBases.forEach((baseName) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'base-chip' + (baseName === currentBase ? ' active' : '');
+          btn.setAttribute('data-base', baseName);
+          const icon = baseIcons[baseName] || '✦';
+          btn.textContent = `${icon} ${baseName}`;
+          btn.addEventListener('click', () => {
             selectChocolateBase(baseName);
           });
+          modalBaseChips.appendChild(btn);
         });
       }
     } else {
@@ -624,7 +655,10 @@ function updateModalPriceAndLink() {
   const price = currentProduct.prices[currentQty] || Object.values(currentProduct.prices)[0];
 
   if (priceVal) priceVal.textContent = `₹${price}`;
-  if (priceSubtext) priceSubtext.textContent = `${currentQty} · ${currentBase}`;
+  if (priceSubtext) {
+    const deliveryNote = price >= 999 ? '✦ Free Delivery Included!' : '✦ Free Delivery on orders above ₹999';
+    priceSubtext.textContent = `${currentQty} · ${currentBase} · ${deliveryNote}`;
+  }
 }
 
 window.closeProductModal = function () {
@@ -644,8 +678,8 @@ const FLOATING_POSTERS = {
     title: 'Almond Crush',
     badgeTitle: 'Almond Crush',
     poster: '/products/floating/almond-crush-studio.jpg',
-    desc: 'Roasted almond goodness meets luscious chocolate, creating a beautifully crunchy bite with a rich, nutty finish. Handcrafted with slow-roasted whole Californian almonds and pure cocoa butter.',
-    pills: ['✦ Slow-Roasted Whole Almonds', '✦ Pure Cocoa Butter', '✦ 4 & 6 Piece Gift Boxes', '✦ Artisanal Keepsake Box'],
+    desc: 'Roasted almond goodness meets luscious chocolate, creating a beautifully crunchy bite with a rich, nutty finish. Handcrafted with slow-roasted whole almonds and rich chocolate.',
+    pills: ['✦ Slow-Roasted Whole Almonds', '✦ Rich Artisanal Chocolate', '✦ 4 & 6 Piece Gift Boxes', '✦ Artisanal Keepsake Box'],
     btnText: 'Explore Almond Crush ✦'
   },
   'cookie-crumble': {
@@ -654,7 +688,7 @@ const FLOATING_POSTERS = {
     badgeTitle: 'Cookie Crumble',
     poster: '/products/floating/cookie-crumble-studio.jpg',
     desc: 'A delightful bite of crunchy Oreo wrapped in smooth, indulgent chocolate. Handcrafted into delicate Oreo Ball truffles with fine chocolate ribbon drizzle.',
-    pills: ['✦ Crushed Oreo Truffles', '✦ Signature Chocolate Ribbon', '✦ 4 & 6 Piece Gift Boxes', '✦ Pure Cocoa Butter'],
+    pills: ['✦ Crushed Oreo Truffles', '✦ Signature Chocolate Ribbon', '✦ 4 & 6 Piece Gift Boxes', '✦ Rich Artisanal Chocolate'],
     btnText: 'Explore Cookie Crumble ✦'
   },
   'biscoff-baby': {
@@ -671,8 +705,8 @@ const FLOATING_POSTERS = {
     title: 'Royal Crunch',
     badgeTitle: 'Royal Crunch',
     poster: '/products/floating/royal-crunch-studio.jpg',
-    desc: 'A luxurious blend of assorted roasted dry fruits encased in rich chocolate, crafted into an elegant square bite bringing together royal richness and satisfying crunch in every bite.',
-    pills: ['✦ Roasted Almonds & Pistachios', '✦ Pure Cocoa Butter', '✦ 4 & 6 Piece Gift Boxes', '✦ Square Artisan Pcs'],
+    desc: 'A luxurious blend of assorted roasted mix dry fruits encased in rich chocolate, crafted into an elegant square bite bringing together royal richness and satisfying crunch in every bite.',
+    pills: ['✦ Roasted Mix Dry Fruits', '✦ Rich Artisanal Chocolate', '✦ 4 & 6 Piece Gift Boxes', '✦ Square Artisan Pcs'],
     btnText: 'Explore Royal Crunch ✦'
   }
 };
@@ -826,6 +860,393 @@ function renderReviewsSection(data) {
 }
 
 // --------------------------------------------------------------------------
+// Advanced Custom Gifting & Bespoke Inquiry Controller
+// --------------------------------------------------------------------------
+const inquiryState = {
+  occasion: 'Wedding & Favours',
+  flavours: ['Cookie Crumble (Oreo Ball)', 'Royal Crunch (Mix Dry Fruit)'],
+  base: 'Assorted Flavours',
+  quantity: '6–15 Boxes',
+  targetDate: '',
+  city: 'Kalyan',
+  packaging: ['Handwritten Note Card', 'Golden Satin Ribbon'],
+  clientName: '',
+  clientPhone: '',
+  clientEmail: '',
+  budget: '',
+  notes: ''
+};
+
+window.switchInquiryMode = function (mode) {
+  const createView = document.getElementById('inquiryCreateView');
+  const trackView = document.getElementById('inquiryTrackView');
+  const btnCreate = document.getElementById('tabBtnCreateInquiry');
+  const btnTrack = document.getElementById('tabBtnTrackInquiry');
+
+  if (mode === 'create') {
+    if (createView) createView.style.display = 'block';
+    if (trackView) trackView.style.display = 'none';
+    if (btnCreate) btnCreate.classList.add('active');
+    if (btnTrack) btnTrack.classList.remove('active');
+  } else {
+    if (createView) createView.style.display = 'none';
+    if (trackView) trackView.style.display = 'block';
+    if (btnCreate) btnCreate.classList.remove('active');
+    if (btnTrack) btnTrack.classList.add('active');
+  }
+};
+
+window.selectOccasion = function (btn, occasion) {
+  document.querySelectorAll('.occasion-card').forEach((el) => el.classList.remove('active'));
+  btn.classList.add('active');
+  inquiryState.occasion = occasion;
+  window.updateInquirySummary();
+};
+
+window.toggleFlavourChip = function (btn, flavour) {
+  const idx = inquiryState.flavours.indexOf(flavour);
+  if (idx > -1) {
+    if (inquiryState.flavours.length > 1) {
+      inquiryState.flavours.splice(idx, 1);
+      btn.classList.remove('active');
+      const check = btn.querySelector('.chip-check');
+      if (check) check.textContent = '+';
+    }
+  } else {
+    inquiryState.flavours.push(flavour);
+    btn.classList.add('active');
+    const check = btn.querySelector('.chip-check');
+    if (check) check.textContent = '✓';
+  }
+  window.updateInquirySummary();
+};
+
+window.selectInquiryBase = function (btn, base) {
+  document.querySelectorAll('.inquiry-base-btn').forEach((el) => el.classList.remove('active'));
+  btn.classList.add('active');
+  inquiryState.base = base;
+  window.updateInquirySummary();
+};
+
+window.selectInquiryQty = function (btn, qty) {
+  document.querySelectorAll('.inquiry-qty-btn').forEach((el) => el.classList.remove('active'));
+  btn.classList.add('active');
+  inquiryState.quantity = qty;
+  window.updateInquirySummary();
+};
+
+window.toggleAddon = function (input) {
+  const card = input.closest('.addon-check-card');
+  if (card) {
+    card.classList.toggle('active', input.checked);
+  }
+  const addons = [];
+  document.querySelectorAll('.addon-checkbox:checked').forEach((ch) => {
+    addons.push(ch.value);
+  });
+  inquiryState.packaging = addons;
+  window.updateInquirySummary();
+};
+
+window.updateInquirySummary = function () {
+  const dateInput = document.getElementById('inquiryEventDate');
+  const citySelect = document.getElementById('inquiryCitySelect');
+  const nameInput = document.getElementById('inquiryClientName');
+  const phoneInput = document.getElementById('inquiryClientPhone');
+  const emailInput = document.getElementById('inquiryClientEmail');
+  const budgetInput = document.getElementById('inquiryBudgetGuide');
+  const notesInput = document.getElementById('inquirySpecialNotes');
+
+  if (dateInput) inquiryState.targetDate = dateInput.value;
+  if (citySelect) inquiryState.city = citySelect.value;
+  if (nameInput) inquiryState.clientName = nameInput.value.trim();
+  if (phoneInput) inquiryState.clientPhone = phoneInput.value.trim();
+  if (emailInput) inquiryState.clientEmail = emailInput.value.trim();
+  if (budgetInput) inquiryState.budget = budgetInput.value.trim();
+  if (notesInput) inquiryState.notes = notesInput.value.trim();
+
+  const occVal = document.getElementById('summaryOccasionVal');
+  const baseVal = document.getElementById('summaryBaseVal');
+  const qtyVal = document.getElementById('summaryQtyVal');
+  const locVal = document.getElementById('summaryLocationVal');
+  const dateRow = document.getElementById('summaryDateRow');
+  const dateVal = document.getElementById('summaryDateVal');
+  const tagsWrap = document.getElementById('summaryCreationsTags');
+  const addonsList = document.getElementById('summaryAddonsList');
+
+  if (occVal) occVal.textContent = inquiryState.occasion;
+  if (baseVal) baseVal.textContent = inquiryState.base;
+  if (qtyVal) qtyVal.textContent = inquiryState.quantity;
+  if (locVal) locVal.textContent = inquiryState.city;
+
+  if (dateRow && dateVal) {
+    if (inquiryState.targetDate) {
+      dateRow.style.display = 'flex';
+      dateVal.textContent = new Date(inquiryState.targetDate).toLocaleDateString('en-IN', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+      });
+    } else {
+      dateRow.style.display = 'none';
+    }
+  }
+
+  if (tagsWrap) {
+    tagsWrap.innerHTML = inquiryState.flavours.map((f) => {
+      const short = f.split('(')[0].trim();
+      return `<span class="mini-tag">${short}</span>`;
+    }).join('');
+  }
+
+  if (addonsList) {
+    if (inquiryState.packaging.length > 0) {
+      addonsList.innerHTML = inquiryState.packaging.map((p) => `<span>• ${p}</span>`).join('');
+    } else {
+      addonsList.innerHTML = `<span style="color: var(--text-muted); font-style: italic;">Standard Packaging</span>`;
+    }
+  }
+};
+
+window.sendQuickWhatsAppInquiry = function () {
+  window.updateInquirySummary();
+  const name = inquiryState.clientName || 'Patron';
+  const waParts = [
+    `✦ *SYAURA LUXURY GIFTING INQUIRY* ✦\n`,
+    `*Client:* ${name}`,
+    inquiryState.clientPhone ? `*Phone:* ${inquiryState.clientPhone}` : null,
+    `*Occasion:* ${inquiryState.occasion}`,
+    `*Creations:* ${inquiryState.flavours.join(', ')}`,
+    `*Chocolate Base:* ${inquiryState.base}`,
+    `*Estimated Volume:* ${inquiryState.quantity}`,
+    inquiryState.targetDate ? `*Target Date:* ${inquiryState.targetDate}` : null,
+    `*City:* ${inquiryState.city}`,
+    inquiryState.packaging.length ? `*Packaging:* ${inquiryState.packaging.join(' · ')}` : null,
+    inquiryState.budget ? `*Budget:* ${inquiryState.budget}` : null,
+    inquiryState.notes ? `*Notes:* "${inquiryState.notes}"` : null,
+    `\n_Handcrafted Luxury, Every Bite Wrapped in Elegance._`
+  ].filter(Boolean);
+
+  const url = `https://wa.me/917559755928?text=${encodeURIComponent(waParts.join('\n'))}`;
+  window.open(url, '_blank', 'noopener');
+};
+
+window.handleInquirySubmit = async function (e) {
+  e.preventDefault();
+  window.updateInquirySummary();
+
+  const submitBtn = document.getElementById('submitInquiryBtn');
+  const statusMsg = document.getElementById('inquirySubmitStatus');
+
+  if (statusMsg) {
+    statusMsg.style.display = 'none';
+    statusMsg.className = 'inquiry-status-msg';
+  }
+
+  if (!inquiryState.clientName || !inquiryState.clientPhone) {
+    if (statusMsg) {
+      statusMsg.textContent = 'Please enter your Full Name and WhatsApp Number.';
+      statusMsg.classList.add('error');
+      statusMsg.style.display = 'block';
+    }
+    return;
+  }
+
+  const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>Recording Bespoke Inquiry...</span> ⏳';
+  }
+
+  try {
+    const payload = {
+      name: inquiryState.clientName,
+      phone: inquiryState.clientPhone,
+      email: inquiryState.clientEmail,
+      area: inquiryState.city,
+      occasion: inquiryState.occasion,
+      flavours: inquiryState.flavours,
+      base: inquiryState.base,
+      quantity: inquiryState.quantity,
+      packaging: inquiryState.packaging,
+      targetDate: inquiryState.targetDate,
+      budget: inquiryState.budget,
+      notes: inquiryState.notes
+    };
+
+    const res = await fetch('/api/inquiries', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+
+    if (!res.ok || !data.success) {
+      throw new Error(data.error || 'Failed to submit inquiry.');
+    }
+
+    // Populate and open success modal
+    const modalRef = document.getElementById('inquiryModalRef');
+    const modalOccasion = document.getElementById('inquiryModalOccasion');
+    const modalQty = document.getElementById('inquiryModalQty');
+    const modalWaBtn = document.getElementById('inquiryModalWaBtn');
+    const modalMessage = document.getElementById('inquiryModalMessage');
+
+    if (modalRef) modalRef.textContent = data.inquiryId;
+    if (modalOccasion) modalOccasion.textContent = inquiryState.occasion;
+    if (modalQty) modalQty.textContent = inquiryState.quantity;
+    if (modalMessage) {
+      modalMessage.textContent = `Thank you, ${inquiryState.clientName}! Your bespoke inquiry has been registered. Reference: ${data.inquiryId}.`;
+    }
+    if (modalWaBtn && data.whatsappUrl) {
+      modalWaBtn.href = data.whatsappUrl;
+    }
+
+    window.openInquiryModal();
+  } catch (err) {
+    if (statusMsg) {
+      statusMsg.textContent = err.message || 'Something went wrong. Please try again or WhatsApp us directly.';
+      statusMsg.classList.add('error');
+      statusMsg.style.display = 'block';
+    }
+  } finally {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHtml;
+    }
+  }
+};
+
+window.openInquiryModal = function () {
+  const modal = document.getElementById('inquirySuccessModal');
+  if (modal) {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeInquiryModal = function () {
+  const modal = document.getElementById('inquirySuccessModal');
+  if (modal) {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+};
+
+window.trackInquiryStatus = async function () {
+  const input = document.getElementById('trackQueryInput');
+  const resultWrap = document.getElementById('trackResultContainer');
+  if (!input || !resultWrap) return;
+
+  const q = input.value.trim();
+  if (!q) {
+    resultWrap.style.display = 'block';
+    resultWrap.innerHTML = `
+      <div style="color: #ef9a9a; text-align: center; font-size: 14px; padding: 12px;">
+        Please enter an Inquiry Reference ID or phone number.
+      </div>`;
+    return;
+  }
+
+  resultWrap.style.display = 'block';
+  resultWrap.innerHTML = `
+    <div style="text-align: center; color: var(--gold-light); font-size: 14px; padding: 16px;">
+      Checking concierge records... ⏳
+    </div>`;
+
+  try {
+    const res = await fetch(`/api/inquiries/track?ref=${encodeURIComponent(q)}`);
+    const data = await res.json();
+
+    if (!res.ok || !data.success || !data.found) {
+      resultWrap.innerHTML = `
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 32px; margin-bottom: 8px;">🔍</div>
+          <h4 style="color: #ef9a9a; margin-bottom: 6px; font-size: 16px;">No Inquiry Record Found</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px; margin-bottom: 14px;">
+            ${data.message || 'We could not find an active inquiry matching this search. Please check your reference ID or phone number.'}
+          </p>
+          <a href="https://wa.me/917559755928?text=Hello%20SYAURA!%20I%20am%20checking%20status%20for%20inquiry:%20${encodeURIComponent(q)}" target="_blank" rel="noopener" class="btn-outline" style="display: inline-flex; padding: 9px 20px; font-size: 13px;">
+            Ask on WhatsApp ↗
+          </a>
+        </div>`;
+      return;
+    }
+
+    const inq = data.inquiry;
+    const dateStr = inq.createdAt
+      ? new Date(inq.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+      : 'Recent';
+
+    let statusLabel = '✦ Under Concierge Review';
+    let statusDesc = 'Your request has been received. Our chocolatier will WhatsApp you shortly with custom box layouts and exact pricing.';
+
+    if ((inq.status || '').toLowerCase().includes('confirm')) {
+      statusLabel = '✓ Confirmed & Production Scheduled';
+      statusDesc = 'Your bespoke inquiry has been approved and scheduled for freshly handcrafted small-batch crafting.';
+    } else if ((inq.status || '').toLowerCase().includes('deliver')) {
+      statusLabel = '🎉 Crafted & Dispatched';
+      statusDesc = 'Your luxury chocolates have been crafted, packaged, and dispatched.';
+    }
+
+    const waText = encodeURIComponent(`Hello SYAURA! Regarding my inquiry reference ${inq.id} (${inq.occasion})...`);
+
+    resultWrap.innerHTML = `
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; border-bottom: 1px solid rgba(212,175,55,0.25); padding-bottom: 14px;">
+        <div>
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Inquiry Reference</span>
+          <h4 style="font-family: var(--font-mono); font-size: 17px; color: var(--gold-light); margin: 2px 0 0;">${inq.id}</h4>
+        </div>
+        <div style="text-align: right;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Submitted On</span>
+          <div style="font-size: 13px; color: #fff;">${dateStr}</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 18px; padding: 14px; background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); border-radius: 12px;">
+        <strong style="color: var(--gold-light); font-size: 14px; display: block; margin-bottom: 4px;">${statusLabel}</strong>
+        <p style="font-size: 12.5px; color: var(--text-muted); margin: 0; line-height: 1.4;">${statusDesc}</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 20px;">
+        <div>
+          <small style="color: var(--text-muted); font-size: 11.5px; display: block;">Occasion</small>
+          <strong style="color: #fff; font-size: 13.5px;">${inq.occasion}</strong>
+        </div>
+        <div>
+          <small style="color: var(--text-muted); font-size: 11.5px; display: block;">Quantity Volume</small>
+          <strong style="color: var(--gold-light); font-size: 13.5px;">${inq.quantity}</strong>
+        </div>
+        <div>
+          <small style="color: var(--text-muted); font-size: 11.5px; display: block;">Chocolate Base</small>
+          <strong style="color: #fff; font-size: 13.5px;">${inq.base}</strong>
+        </div>
+        <div>
+          <small style="color: var(--text-muted); font-size: 11.5px; display: block;">Dispatch Region</small>
+          <strong style="color: #fff; font-size: 13.5px;">${inq.area}</strong>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <small style="color: var(--text-muted); font-size: 11.5px; display: block; margin-bottom: 4px;">Requested Creations</small>
+        <div style="color: #fff; font-size: 13px;">${inq.selection}</div>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <a href="https://wa.me/917559755928?text=${waText}" target="_blank" rel="noopener" class="btn-gold" style="padding: 9px 20px; font-size: 13px;">
+          <span>Chat on WhatsApp with Ref ↗</span>
+        </a>
+      </div>`;
+  } catch (err) {
+    resultWrap.innerHTML = `
+      <div style="color: #ef9a9a; text-align: center; font-size: 13.5px; padding: 12px;">
+        Could not connect to tracking server. Please check your internet connection or WhatsApp us directly.
+      </div>`;
+  }
+};
+
+// --------------------------------------------------------------------------
 // Initialization
 // --------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
@@ -838,17 +1259,19 @@ document.addEventListener('DOMContentLoaded', () => {
       closeProductModal();
       closePriceCardModal();
       closeInstaPrompt();
+      closeInquiryModal();
     }
   });
 
   // Close modals on backdrop click
-  ['productModal', 'priceCardModal'].forEach((modalId) => {
+  ['productModal', 'priceCardModal', 'inquirySuccessModal'].forEach((modalId) => {
     const el = document.getElementById(modalId);
     if (el) {
       el.addEventListener('click', (e) => {
         if (e.target === el) {
           if (modalId === 'productModal') closeProductModal();
           if (modalId === 'priceCardModal') closePriceCardModal();
+          if (modalId === 'inquirySuccessModal') closeInquiryModal();
         }
       });
     }
@@ -859,6 +1282,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const priceModalCloseBtn = document.getElementById('priceCardModalCloseBtn');
   if (priceModalCloseBtn) priceModalCloseBtn.addEventListener('click', closePriceCardModal);
+
+  // Initialize summary on page load
+  window.updateInquirySummary();
 
   // Mobile menu toggle
   const mobileToggle = document.getElementById('mobileToggle');

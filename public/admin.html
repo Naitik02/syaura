@@ -1274,7 +1274,20 @@
             : 'N/A';
 
           const cleanPhone = (item.phone || '').replace(/[^0-9]/g, '');
-          const waUrl = `https://wa.me/${cleanPhone.startsWith('91') ? cleanPhone : '91' + cleanPhone}?text=Hello%20${item.name}!%20From%20SYAURA%20Chocolates`;
+          const waText = encodeURIComponent(
+            `Hello ${item.name}! Greetings from SYAURA Handcrafted Chocolates regarding your inquiry ${item.id} (${item.occasion || 'Custom Gifting'}).\n\nHow can we assist you with your chocolate curation?`
+          );
+          const waUrl = `https://wa.me/${cleanPhone.startsWith('91') ? cleanPhone : '91' + cleanPhone}?text=${waText}`;
+
+          const occasionBadge = item.occasion
+            ? `<span class="item-badge" style="background: rgba(212, 175, 55, 0.18); border-color: rgba(212, 175, 55, 0.4); color: var(--gold-light);">${escapeHtml(item.occasion)}</span>`
+            : '';
+          const packagingText = Array.isArray(item.packaging) && item.packaging.length
+            ? `<br /><small style="color: var(--sage-light); font-size: 11px;">🎁 ${escapeHtml(item.packaging.join(' · '))}</small>`
+            : '';
+          const targetDateText = item.targetDate
+            ? `<br /><small style="color: #34d399; font-family: var(--font-mono); font-size: 11px;">📅 Event: ${escapeHtml(item.targetDate)}</small>`
+            : '';
 
           return `
             <tr>
@@ -1283,10 +1296,20 @@
               <td>
                 <span class="customer-name">${escapeHtml(item.name)}</span>
                 <a href="tel:${escapeHtml(item.phone)}" class="customer-phone">${escapeHtml(item.phone)}</a>
+                ${item.email ? `<br /><small style="color: var(--text-muted); font-size: 11px;">${escapeHtml(item.email)}</small>` : ''}
               </td>
               <td>${escapeHtml(item.area || '—')}</td>
-              <td><strong style="color: var(--gold-light);">${escapeHtml(item.selection || 'Assorted')}</strong></td>
-              <td><small style="color: var(--text-muted);">${escapeHtml(item.notes || 'None')}</small></td>
+              <td>
+                <div style="margin-bottom: 4px;">
+                  ${occasionBadge}
+                  <strong style="color: var(--gold-light); font-size: 12px; margin-left: 4px;">${escapeHtml(item.quantity || '')}</strong>
+                </div>
+                <strong style="color: #ffffff; font-size: 13px;">${escapeHtml(item.selection || 'Assorted')}</strong>
+                <br /><small style="color: var(--text-muted); font-size: 11px;">Base: ${escapeHtml(item.base || 'Assorted Flavours')}</small>
+                ${packagingText}
+                ${targetDateText}
+              </td>
+              <td><small style="color: var(--text-muted); font-size: 12px;">${escapeHtml(item.notes || 'None')}</small></td>
               <td>
                 <select class="status-select" onchange="updateInquiryStatus('${item.id}', this.value)">
                   <option value="Pending Contact" ${item.status === 'Pending Contact' ? 'selected' : ''}>Pending Contact</option>
@@ -1297,8 +1320,8 @@
               </td>
               <td>
                 <div style="display: flex; gap: 8px; align-items: center;">
-                  <a href="${waUrl}" target="_blank" rel="noopener" class="btn-wa">WA</a>
-                  <button class="btn-del" onclick="deleteInquiry('${item.id}')">✕</button>
+                  <a href="${waUrl}" target="_blank" rel="noopener" class="btn-wa" title="WhatsApp Customer">WA</a>
+                  <button class="btn-del" onclick="deleteInquiry('${item.id}')" title="Delete Inquiry">✕</button>
                 </div>
               </td>
             </tr>`;

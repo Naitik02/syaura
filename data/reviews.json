@@ -14,8 +14,8 @@
     "name": "Rohan A.",
     "city": "Thane",
     "rating": 5,
-    "chocolate": "Modak Royale (21 Pcs)",
-    "review": "Ordered the 21-piece Modak Royale Box for Ganesh Chaturthi. Not only did it look stunning, the taste of dark chocolate with toasted nuts was out of this world!",
+    "chocolate": "Modak Royale (Chocolate Modak · 21 Pcs)",
+    "review": "Ordered the 21-piece Modak Royale Box for Ganesh Chaturthi. Not only did it look stunning, the taste of chocolate modak with roasted almonds inside was out of this world!",
     "createdAt": "2026-09-08T10:15:00.000Z",
     "verified": true
   },
@@ -35,7 +35,7 @@
     "city": "Navi Mumbai",
     "rating": 5,
     "chocolate": "Royal Crunch (Mix Dry Fruit)",
-    "review": "Ordered a 6-cavity box of Royal Crunch for my sister's birthday. The whole pistachios and roasted almond toppings on dark chocolate were incredible! Premium luxury packaging.",
+    "review": "Ordered a 6-piece box of Royal Crunch for my sister's birthday. The roasted mix dry fruits on rich chocolate were incredible! Premium luxury packaging.",
     "createdAt": "2026-09-09T09:20:00.000Z",
     "verified": true
   },

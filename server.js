@@ -110,14 +110,15 @@ const products = [
       '/products/bases/cookie-crumble-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/cookie-crumble-floating.png',
       'Milk Chocolate': '/products/bases/cookie-crumble-milk.jpg',
       'Dark Chocolate': '/products/bases/cookie-crumble-dark.jpg',
       'White Chocolate': '/products/bases/cookie-crumble-white.jpg'
     },
     defaultQuantity: '4 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 139,
       '6 Pieces': 169
@@ -127,12 +128,12 @@ const products = [
   {
     id: 'royal-crunch',
     name: 'Royal Crunch',
-    flavour: 'Mixed Dry Fruit Square',
+    flavour: 'Mix Dry Fruit Square',
     category: 'choco-bites',
     categoryTitle: 'Choco Bites',
     shape: 'square',
     shapeLabel: 'Square Pcs · 4 & 6 per box',
-    description: 'A luxurious blend of assorted roasted dry fruits encased in rich chocolate, crafted into an elegant square bite bringing together royal richness and satisfying crunch in every bite.',
+    description: 'A luxurious blend of assorted roasted mix dry fruits encased in rich chocolate, crafted into an elegant square bite bringing together royal richness and satisfying crunch in every bite.',
     badge: 'Royal Selection',
     image: '/products/floating/royal-crunch-studio.jpg',
     cutout: '/products/floating/royal-crunch-floating.png',
@@ -146,14 +147,15 @@ const products = [
       '/products/bases/royal-crunch-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/royal-crunch-floating.png',
       'Milk Chocolate': '/products/bases/royal-crunch-milk.jpg',
       'Dark Chocolate': '/products/bases/royal-crunch-dark.jpg',
       'White Chocolate': '/products/bases/royal-crunch-white.jpg'
     },
     defaultQuantity: '4 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 179,
       '6 Pieces': 199
@@ -182,14 +184,15 @@ const products = [
       '/products/bases/cookie-crave-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/cookie-crave-floating.png',
       'Milk Chocolate': '/products/bases/cookie-crave-milk.jpg',
       'Dark Chocolate': '/products/bases/cookie-crave-dark.jpg',
       'White Chocolate': '/products/bases/cookie-crave-white.jpg'
     },
     defaultQuantity: '4 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 119,
       '6 Pieces': 139
@@ -218,14 +221,15 @@ const products = [
       '/products/bases/almond-crush-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/almond-crush-floating.png',
       'Milk Chocolate': '/products/bases/almond-crush-milk.jpg',
       'Dark Chocolate': '/products/bases/almond-crush-dark.jpg',
       'White Chocolate': '/products/bases/almond-crush-white.jpg'
     },
     defaultQuantity: '4 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 169,
       '6 Pieces': 199
@@ -254,14 +258,15 @@ const products = [
       '/products/bases/biscoff-baby-dark.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['White Chocolate', 'Milk Chocolate', 'Dark Chocolate'],
+    availableBases: ['Assorted Flavours', 'White Chocolate', 'Milk Chocolate', 'Dark Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/biscoff-baby-floating.png',
       'White Chocolate': '/products/bases/biscoff-baby-white.jpg',
       'Milk Chocolate': '/products/bases/biscoff-baby-milk.jpg',
       'Dark Chocolate': '/products/bases/biscoff-baby-dark.jpg'
     },
     defaultQuantity: '4 Pieces',
-    defaultBase: 'White Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '4 Pieces': 199,
       '6 Pieces': 239
@@ -273,12 +278,12 @@ const products = [
   {
     id: 'nut-noble',
     name: 'Nut & Noble',
-    flavour: 'Mixed Dry Fruit Bar',
+    flavour: 'Mix Dry Fruit Bar',
     category: 'artisan-bars',
     categoryTitle: 'The Artisan Bars',
     shape: 'bar',
     shapeLabel: 'Artisan Bar · 11 Pcs',
-    description: 'A generous blend of premium dry fruits wrapped in rich chocolate. Nut & Noble celebrates the naturally luxurious character of every nut.',
+    description: 'A generous blend of premium mix dry fruits wrapped in rich chocolate. Nut & Noble celebrates the naturally luxurious character of handcrafted chocolates.',
     badge: 'Gifting Special',
     image: '/products/floating/nut-noble-studio.jpg',
     cutout: '/products/floating/nut-noble-floating.png',
@@ -288,9 +293,16 @@ const products = [
       '/products/floating/nut-noble-macro.jpg',
       '/products/floating/nut-noble-floating.png'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Assorted Flavours': '/products/floating/nut-noble-floating.png',
+      'Milk Chocolate': '/products/floating/nut-noble-studio.jpg',
+      'Dark Chocolate': '/products/floating/nut-noble-studio.jpg',
+      'White Chocolate': '/products/floating/nut-noble-studio.jpg'
+    },
     defaultQuantity: '11 Pieces',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '11 Pieces': 210
     },
@@ -314,9 +326,16 @@ const products = [
       '/products/floating/cookie-crunch-bar-macro.jpg',
       '/products/floating/cookie-crunch-bar-floating.png'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Assorted Flavours': '/products/floating/cookie-crunch-bar-floating.png',
+      'Milk Chocolate': '/products/floating/cookie-crunch-bar-studio.jpg',
+      'Dark Chocolate': '/products/floating/cookie-crunch-bar-studio.jpg',
+      'White Chocolate': '/products/floating/cookie-crunch-bar-studio.jpg'
+    },
     defaultQuantity: '11 Pieces',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '11 Pieces': 169
     },
@@ -325,12 +344,12 @@ const products = [
   {
     id: 'modak-royale',
     name: 'Modak Royale',
-    flavour: 'Dry Fruit Modak Bar',
+    flavour: 'Chocolate Modak',
     category: 'artisan-bars',
     categoryTitle: 'The Artisan Bars',
     shape: 'modak',
     shapeLabel: 'Festive Modak · 21 Pcs',
-    description: 'A festive fusion of rich chocolate and crunchy dry fruits, inspired by the timeless modak and crafted with a royal touch.',
+    description: 'Festive handcrafted chocolate modaks with whole almonds nestled inside, inspired by timeless sacred tradition and crafted with an artisanal royal touch.',
     badge: 'Festive Drop',
     image: '/products/floating/modak-royale-studio.jpg',
     cutout: '/products/floating/modak-royale-floating.png',
@@ -340,9 +359,16 @@ const products = [
       '/products/floating/modak-royale-macro.jpg',
       '/products/floating/modak-royale-floating.png'
     ],
-    baseCustomizable: false,
-    availableBases: [],
+    baseCustomizable: true,
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    baseImages: {
+      'Assorted Flavours': '/products/floating/modak-royale-floating.png',
+      'Milk Chocolate': '/products/floating/modak-royale-studio.jpg',
+      'Dark Chocolate': '/products/floating/modak-royale-studio.jpg',
+      'White Chocolate': '/products/floating/modak-royale-studio.jpg'
+    },
     defaultQuantity: '21 Pieces',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '21 Pieces': 249
     },
@@ -372,14 +398,15 @@ const products = [
       '/products/bases/cookie-heart-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/cookie-heart-floating.png',
       'Milk Chocolate': '/products/bases/cookie-heart-milk.jpg',
       'Dark Chocolate': '/products/bases/cookie-heart-dark.jpg',
       'White Chocolate': '/products/bases/cookie-heart-white.jpg'
     },
     defaultQuantity: '12 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '12 Pieces': 499,
       '18 Pieces': 699
@@ -389,12 +416,12 @@ const products = [
   {
     id: 'royal-heart',
     name: 'Royal Heart',
-    flavour: 'Mixed Dry Fruit Heart',
+    flavour: 'Mix Dry Fruit Heart',
     category: 'sweet-hearts',
     categoryTitle: 'Sweet Hearts',
     shape: 'heart',
     shapeLabel: 'Diamond Heart · 12 & 18 Pcs',
-    description: 'A delicate faceted 3D heart filled with royal dry fruits, topped with roasted pistachios, golden almond slivers, and rich caramel ribbons wrapped in smooth chocolate.',
+    description: 'A delicate faceted 3D heart filled with premium mix dry fruits, wrapped in smooth, rich chocolate.',
     badge: 'Pure Luxury',
     image: '/products/floating/royal-heart-studio.jpg',
     cutout: '/products/floating/royal-heart-isolated.png',
@@ -408,14 +435,15 @@ const products = [
       '/products/bases/royal-heart-white.jpg'
     ],
     baseCustomizable: true,
-    availableBases: ['Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
+    availableBases: ['Assorted Flavours', 'Milk Chocolate', 'Dark Chocolate', 'White Chocolate'],
     baseImages: {
+      'Assorted Flavours': '/products/floating/royal-heart-isolated.png',
       'Milk Chocolate': '/products/bases/royal-heart-milk.jpg',
       'Dark Chocolate': '/products/bases/royal-heart-dark.jpg',
       'White Chocolate': '/products/bases/royal-heart-white.jpg'
     },
     defaultQuantity: '12 Pieces',
-    defaultBase: 'Milk Chocolate',
+    defaultBase: 'Assorted Flavours',
     prices: {
       '12 Pieces': 449,
       '18 Pieces': 649
@@ -609,8 +637,12 @@ const server = http.createServer(async (req, res) => {
       const notes = String(payload.notes || '').trim();
       const items = Array.isArray(payload.items) ? payload.items : [];
       const packageFee = Number(payload.packageFee) || 35;
-      const deliveryFee = Number(payload.deliveryFee) || 55;
       const subtotal = Number(payload.subtotal) || 0;
+      // Free Delivery on orders above ₹999
+      let deliveryFee = Number(payload.deliveryFee) || 55;
+      if (subtotal >= 999) {
+        deliveryFee = 0;
+      }
       const totalAmount = Number(payload.totalAmount) || (subtotal + packageFee + deliveryFee);
       const upiRef = String(payload.upiRef || '').trim();
       const paymentScreenshot = String(payload.paymentScreenshot || '');
@@ -1058,61 +1090,150 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // Public: Customer creates order / inquiry
+  // Public: Customer creates advanced order / bespoke inquiry
   if (req.method === 'POST' && url.pathname === '/api/inquiries') {
     try {
       const payload = await readBody(req);
       const name = String(payload.name || '').trim();
       const phone = String(payload.phone || '').trim();
+      const email = String(payload.email || '').trim();
       const area = String(payload.area || '').trim();
-      const selection = String(payload.selection || '').trim();
-      const base = String(payload.base || '').trim();
-      const quantity = String(payload.quantity || '').trim();
+      const occasion = String(payload.occasion || 'Bespoke Gifting').trim();
+      
+      // Flavours can be array or string
+      let selection = payload.selection || payload.flavours || 'Assorted Creations';
+      if (Array.isArray(selection)) {
+        selection = selection.filter(Boolean).join(', ') || 'Assorted Creations';
+      } else {
+        selection = String(selection).trim();
+      }
+
+      const base = String(payload.base || 'Assorted Flavours').trim();
+      const quantity = String(payload.quantity || 'Not specified').trim();
       const price = String(payload.price || '').trim();
-      const notes = String(payload.notes || '').trim();
+      const targetDate = String(payload.targetDate || payload.deliveryDate || '').trim();
+      
+      // Packaging add-ons
+      let packaging = payload.packaging || payload.packagingAddons || [];
+      if (Array.isArray(packaging)) {
+        packaging = packaging.filter(Boolean);
+      } else if (packaging) {
+        packaging = [String(packaging)];
+      }
+
+      const budget = String(payload.budget || '').trim();
+      const notes = String(payload.notes || payload.specialRequests || '').trim();
 
       if (!name || !phone) {
-        send(res, 400, { error: 'Name and Phone number are required.' });
+        send(res, 400, { error: 'Name and Phone number are required to submit an inquiry.' });
         return;
       }
 
+      const inquiryId = `SYAURA-INQ-${randomUUID().slice(0, 6).toUpperCase()}`;
+
       const inquiry = {
-        id: `SYAURA-${randomUUID().slice(0, 8).toUpperCase()}`,
+        id: inquiryId,
         createdAt: new Date().toISOString(),
         name,
         phone,
-        area,
+        email: email || undefined,
+        area: area || 'Not specified',
+        occasion,
         selection,
-        base: base || 'Not specified',
-        quantity: quantity || 'Not specified',
-        price: price || '',
+        base,
+        quantity,
+        packaging,
+        targetDate: targetDate || undefined,
+        budget: budget || undefined,
+        price: price || undefined,
         notes,
         status: 'Pending Contact'
       };
 
       saveInquiry(inquiry);
 
-      const waText = encodeURIComponent(
-        `Hello SYAURA! I would like to place an order / inquiry.\n\n` +
-        `*Reference:* ${inquiry.id}\n` +
-        `*Name:* ${name}\n` +
-        `*Phone:* ${phone}\n` +
-        `*Delivery Area:* ${area || 'Not specified'}\n` +
-        `*Product / Flavour:* ${selection || 'Assorted Boxes'}\n` +
-        (base ? `*Chocolate Base:* ${base}\n` : '') +
-        (quantity ? `*Box Quantity:* ${quantity}\n` : '') +
-        (price ? `*Price:* ${price}\n` : '') +
-        (notes ? `*Custom Note:* ${notes}\n` : '')
-      );
+      // Construct formatted luxury WhatsApp synthesis text
+      const waParts = [
+        `✦ *SYAURA BESPOKE INQUIRY* ✦\n`,
+        `*Reference:* ${inquiry.id}`,
+        `*Client:* ${name}`,
+        `*Phone:* ${phone}`,
+        area ? `*Location:* ${area}` : null,
+        `*Occasion:* ${occasion}`,
+        `*Selected Creations:* ${selection}`,
+        `*Chocolate Base:* ${base}`,
+        `*Estimated Quantity:* ${quantity}`,
+        targetDate ? `*Target Date:* ${targetDate}` : null,
+        packaging.length > 0 ? `*Packaging Add-ons:* ${packaging.join(' · ')}` : null,
+        budget ? `*Approx. Budget:* ${budget}` : null,
+        notes ? `*Special Requests / Notes:*\n"${notes}"` : null,
+        `\n_Handcrafted Luxury, Every Bite Wrapped in Elegance._`
+      ].filter(Boolean);
+
+      const waText = encodeURIComponent(waParts.join('\n'));
 
       send(res, 201, {
         success: true,
         inquiryId: inquiry.id,
-        message: 'Thank you! Your order inquiry has been received. We will contact you shortly.',
-        whatsappUrl: `https://wa.me/917559755928?text=${waText}`
+        message: `Thank you, ${name}! Your bespoke inquiry (${inquiry.id}) has been recorded. Our chocolatier will connect with you on WhatsApp shortly.`,
+        whatsappUrl: `https://wa.me/917559755928?text=${waText}`,
+        inquiry
       });
     } catch (error) {
       send(res, 400, { error: error.message || 'Could not save inquiry.' });
+    }
+    return;
+  }
+
+  // Public: Customer checks inquiry status by Reference ID or Phone Number
+  if (req.method === 'GET' && url.pathname === '/api/inquiries/track') {
+    try {
+      const q = String(url.searchParams.get('ref') || url.searchParams.get('query') || url.searchParams.get('id') || '').trim();
+      if (!q) {
+        send(res, 400, { error: 'Please provide an Inquiry Reference ID or registered phone number.' });
+        return;
+      }
+
+      let inquiries = [];
+      if (fs.existsSync(inquiriesFile)) {
+        inquiries = JSON.parse(fs.readFileSync(inquiriesFile, 'utf8'));
+      }
+
+      const cleanQ = q.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+      const match = inquiries.find((i) => {
+        const cleanId = (i.id || '').replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+        const cleanPhone = (i.phone || '').replace(/[^0-9]/g, '');
+        return cleanId === cleanQ || cleanId.includes(cleanQ) || (cleanPhone && cleanPhone.endsWith(cleanQ));
+      });
+
+      if (!match) {
+        send(res, 200, {
+          success: true,
+          found: false,
+          message: `No inquiry found matching "${q}". Please verify your reference ID or phone number.`
+        });
+        return;
+      }
+
+      // Return sanitized client-safe inquiry status
+      send(res, 200, {
+        success: true,
+        found: true,
+        inquiry: {
+          id: match.id,
+          createdAt: match.createdAt,
+          status: match.status || 'Pending Contact',
+          occasion: match.occasion || 'Custom Selection',
+          selection: match.selection || 'Assorted Chocolates',
+          base: match.base || 'Assorted Flavours',
+          quantity: match.quantity || 'Custom Quantity',
+          area: match.area || 'Direct Dispatch',
+          targetDate: match.targetDate || null,
+          packaging: match.packaging || []
+        }
+      });
+    } catch (err) {
+      send(res, 500, { error: 'Could not query inquiry status.' });
     }
     return;
   }
